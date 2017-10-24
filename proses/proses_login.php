@@ -1,5 +1,5 @@
 <?php 
-	include("../koneksi/connect.php");
+	include("../connect/connect.php");
 	$user =$_POST['username'];
 	$pass =$_POST['password'];
 
@@ -12,14 +12,14 @@
 				session_start();
 				$_SESSION['user']=$user;
 				if($result['kode_id']=='1'){
-					echo "<script> alert('Selamat datang PERAWAT!');
+					echo "<script> alert('Anda Berhasil Login');
 					window.location.href='../home_admin.php' </script>";
 				} else if($result['kode_id']=='2'){
-					echo "<script> alert('Selamat datang DOKTER!');
-					window.location.href='../home_dokter.php?id=$result[id]' </script>";
+					echo "<script> alert('Anda Berhasil Login');
+					window.location.href='../home_dokter.php' </script>";
 				} else if($result['kode_id']=='3'){
-					echo "<script> alert('Selamat datang CALON IBU!');
-					window.location.href='../home_pasien.php?id=$result[id]' </script>";
+					echo "<script> alert('Anda Berhasil Login');
+					window.location.href='../home_pasien.php' </script>";
 				}
 			}
 				
