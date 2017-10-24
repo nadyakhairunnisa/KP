@@ -29,7 +29,7 @@
             <input type="text" name="username" placeholder="Username"></input><br>
             <label>Password</label><br>
             <input type="password" name="password" placeholder="Password"></input><br>
-            <button type="submit" name="login" style="border: none; background-color:#e0e0e0;"><div class="btn">Login</div></button></a>
+            <button type="submit" name="login" style="outline: transparent;"><div class="btn">Login</div></button></a>
       </form>
       </div>
 

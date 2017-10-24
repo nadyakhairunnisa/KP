@@ -1,6 +1,8 @@
 <?php
-  include("proses/check_login.php");
-  include("koneksi/connect.php");
+    include("connect/connect.php");
+    $id=$_GET['id'];
+    $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$id LIMIT 1");
+    $bidan= mysqli_fetch_array($sql);
 ?>
 
 <!DOCTYPE html>
@@ -42,53 +44,35 @@
 
           <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="#page-top" class="page-scroll top">HOME</a></li>
-                <li><a href="kelola_ibu.html" class="page-scroll">PASIEN</a></li>               
-                <li><a href="kelola_dokter.html" class="page-scroll">DOKTER</a></li>                
+               <li><a href="home_admin.html" class="page-scroll top">HOME</a></li>
+                <li><a href="read_pasien.html" class="page-scroll">PASIEN</a></li>               
+                <li><a href="read_dokter.html" class="page-scroll">DOKTER</a></li>                
                 <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
-                <li><a href="kelola_perkembangan_list.html" class="page-scroll">PERKEMBANGAN</a></li>                
-                <li><a class="page-scroll">Login As Perawat</a></li>                
-                <li><a href="proses/logout.php" class="page-scroll">Sign-Out</a></li>                
+                <li><a href="read_perkembangan.html" class="page-scroll">PERKEMBANGAN</a></li>                
+                <li><a href="#" class="page-scroll">Login As Perawat</a></li>                
+                <li><a href="login_admin.html" class="page-scroll">Sign-Out</a></li>                  
             </ul>              
           </div>        
         </div>        
       </nav>
 
-      <div class="col-md-12 hadmin">
-      <h1 class="atas">Home Perawat</h1>
-        <a href="kelola_ibu.html">
-        <div class="col-md-6 pilih animated fadeInLeft flow1">
-            <div class="kotok">        
-                <i class="fa fa-female fa-5x" aria-hidden="true"></i>
-                <h1>Kelola Data Ibu</h1>
-            </div>
-        </div>
-        </a>
-        <a href="kelola_dokter.html">
-        <div class="col-md-6 pilih  animated fadeInRight flow2">
-            <div class="kotok">         
-            <i class="fa fa-user-md fa-5x" aria-hidden="true"></i>
-            <h1>Kelola Data Dokter</h1>
-            </div>
-        </div>
-        </a>
-        <a href="kelola_perkembangan_list.html">
-        <div class="col-md-6 pilih  animated fadeInLeft flow3">
-            <div class="kotok">        
-            <i class="fa fa-book fa-5x" aria-hidden="true"></i>
-            <h1>Kelola Data Perkembangan</h1>
-            </div>
-        </div>
-        </a>
-        <a href="kelola_jadwal.html">
-        <div class="col-md-6 pilih animated  fadeInRight flow4">
-            <div class="kotok">        
-            <i class="fa fa-calendar-plus-o fa-5x" aria-hidden="true"></i>
-            <h1>Kelola Jadwal Check - Up</h1>
-            </div>
-        </div>
-        </a>
-      </div>
+      <h1 style="text-align: center; margin-top:85px; color:black;">Update Data Bidan</h1>
+        <form action="proses/bidan/update_bidan.php" method="POST" enctype="multipart/form-data" style="margin-top:50px;">
+            <form action="proses/bidan/add_bidan.php" method="POST" enctype="multipart/form-data" style="margin-top:50px;">
+            <label>Nama</label> <br>
+                <input id="nama" name="nama" type="text" placeholder="Nama" maxlength="255" value="<?php echo $bidan['nama'];?>"> <br>
+            <label>No. Handphone</label> <br>
+                <input id="no_hp" name="no_hp" type="text" placeholder="No. HP" maxlength="15" vaue="<?php echo $bidan['no_hp'];?>"> <br>
+             <label>Alamat</label> <br>
+                <textarea id="alamat" name="alamat" style="width:55%;" value="<?php echo $bidan['alamat'];?>"></textarea> <br>  
+            <label>Tanggal</label> <br>
+                <input id="tanggal" name="tanggal" type="date" placeholder="Tanggal Masuk" value="<?php echo $bidan['tanggal'];?>"> <br>
+
+             <button type="submit" onclick="return konfirmasi_ubah()"> Update </button>   
+
+           <!--  <a href="kelola_dokter.html"><div class="btn">Submit</div></a> -->
+
+        </form>
   <!-- This Background Slider -->
   
     <!-- All Of Script -->

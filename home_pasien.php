@@ -41,17 +41,11 @@
             </div>
 
           <div id="navbar" class="navbar-collapse collapse navbar-right">
-            <ul class="nav navbar-nav">                               
-                <?php
-                    $userid = $_GET['id']; 
-                    $query = mysqli_query($conn, "SELECT u.id, p.user_id, p.nama FROM user u JOIN pasien p ON u.id = p.user_id WHERE p.user_id='$userid'");
-                    while ($baris=mysqli_fetch_assoc($query)){
-                        echo("<li><a href='#page-top' class='page-scroll top'>HOME</a></li>");
-                        echo("<li><a href='lihat_perkembangan.php?id=$userid' class='page-scroll'>PERKEMBANGAN</a></li>");
-                        echo("<li><a href='lihat_jadwal.php?id=$userid' class='page-scroll'>JADWAL CHECK - UP</a></li>");
-                        echo("<li><a class='page-scroll'>Login as $baris[nama]</a></li>");
-                    }
-                ?>                
+            <ul class="nav navbar-nav">
+                <li><a href="#page-top" class="page-scroll top">HOME</a></li>
+                <li><a href="lihat_perkembangan_list.html" class="page-scroll">PERKEMBANGAN</a></li>               
+                <li><a href="lihat_jadwal.html" class="page-scroll">JADWAL CHECK - UP</a></li>                               
+                <li><a class="page-scroll">Login As Dian R.</a></li>                
                 <li><a href="proses/logout.php" class="page-scroll">Sign-Out</a></li>                
             </ul>              
           </div>        
@@ -60,7 +54,7 @@
 
       <div class="col-md-12 hadmin" style="height:610px;">
       <h1 class="atas">Home Ibu</h1>
-        <?php $userid = $_GET['id']; echo("<a href='lihat_perkembangan.php?id=$userid'>"); ?>
+        <a href="lihat_perkembangan_list.html">
         <div class="col-md-6 pilih animated fadeInLeft flow1">
             <div class="kotok">        
                 <i class="fa fa-stethoscope fa-5x" aria-hidden="true"></i>
