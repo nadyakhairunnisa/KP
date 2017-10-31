@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Fjalla+One');
+
+  body{
+    background:#fff;
+  }  
+  /*Style untuk Login*/
+  .col-md-12.login{
+    background:url(../images/bg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;    
+  }
+  form{
+    border-radius:5%;
+    text-align: center;
+    background:#e0e0e0  ;
+    margin:0px 400px;
+    padding-bottom:20px;
+    padding-top:5px;
+    
+  }
+  form h3{
+    color:#039be5;
+    font-family: 'Fjalla One', sans-serif;
+    font-size:30px;
+    letter-spacing:4px;
+  }
+  form label{    
+    margin-top:10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-size:17px;
+    letter-spacing:2px;
+  }
+  form input{
+    width:55%;
+    text-align:center;
+    border:none;
+    outline:0 none;
+    padding:5px 10px;
+    border-radius:5px;
+    margin-bottom:5px;
+  }
+  /*form.form_edit{
+    border-radius:5%;
+    text-align: center;
+    background:#e0e0e0  ;
+    
+    padding-bottom:10px;
+    padding-top:10px;
+  }*/
+  .btn{
+    background-color:#039be5;
+    margin-top:10px;
+    color:#fff;
+    padding:3px 15px;
+    font-size: 18px;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing:1px;
+  }
+  .btn:hover,a:hover{
+    color:#fff;
+  }
+
+  /*Style untuk Home_admin*/
+  .navbar {
+        border-top:3px solid #00acc1;
+        border-bottom:1px solid #00acc1;
+        background-color:#fff;       
+        padding-top:0;                       
+        padding:10px;        
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;                
+        font-size: 150px;        
+    }
+    .top-nav-collapse{                    
+        padding:5px;
+        background-color:#fff;                      
+        font-size: 12px;          
+         
+    } 
+    .navbar .navbar-nav li a{    
+      font-family: 'Dosis', sans-serif;              
+      letter-spacing:1px;
+      outline:0 none;                
+      font-weight:0;
+      font-size:15px;
+      color:#757575;      
+      transition-duration:0.8s;      
+    }   
+    .navbar .navbar-nav li a:hover{
+      color:#00acc1;
+      font-size:19px;
+      font-weight:900;
+    }
+    .navbar .navbar-nav li.active a{
+      font-weight:400;
+      background:transparent;
+      color:#00acc1;      
+    }
+    .navbar .navbar-nav li.active a:visited,.navbar .navbar-nav li.active a:hover{
+      background:#fff;
+      color:#00acc1;
+    }
+    .navbar-brand.page-scroll{  
+    font-family: 'Dosis', sans-serif;  
+    outline: 0 none;
+    color:#00acc1;    
+    background-color: transparent;
+    margin-right:100px;
+    font-size:40px;
+    }         
+    .navbar-brand.page-scroll:hover{
+      color:#00acc1;
+    }    
+
+    .col-md-12.hadmin{
+      background:url(../images/bg.jpg);
+      
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+    h1.atas{
+      margin-top:75px;
+      color:#fff;      
+      margin-bottom:50px;
+      font-size:50px;
+      padding-top:50px;
+      text-align:center;
+      font-family: 'Fjalla One', sans-serif;
+    }
+    .col-md-6.pilih{
+      text-align:left;
+    }
+    .kotok{
+      text-align:center;
+      background-color:#eeeeee;
+      height:200px;
+      margin:30px 100px;
+      border-radius:10%;
+      font-family: 'Fjalla One', sans-serif;
+      color:#00acc1;
+      -webkit-transition:all 1s;
+    }
+    .kotok:hover{
+      background-color:#00acc1;
+      color:#fff;
+    }
+    .fa{
+      margin-top:20px;
+          }
+    .col-md-6.pilih h1{
+      font-size:30px;
+      padding:0;margin-top:40px;
+    }
+  .zoom {
+    position: relative;    
+    overflow: hidden;        
+  }
+  .zoom.zoomin {
+    max-width: 100%;    
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .zoom.zoomin:hover {    
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);        
+  }
+  .flow1{animation-delay: 0.5s;}.flow2{animation-delay: 1s;}.flow3{animation-delay: 1.5s;}
+  .flow4{animation-delay:2s;}
+  
+  /*Style untuk kelola ibu*/
+  .col-md-11.kibu{
+    margin-top:75px;
+  }
+  .col-md-1.kibu{
+    margin-top:200px;
+  }
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  th{
+    color:#00acc1;
+  }
+  th, td {
+      text-align:center;
+      padding: 8px;
+  }
+  tr:nth-child(even){background-color: #b3e5fc }
+
+  tr.hari td{
+    font-size: 25px;
+    letter-spacing:2px;
+    font-family: 'Fjalla One', sans-serif;
+    border:none;
+    padding:10px 0px;
+  }
+  tr.tanggal td{
+    letter-spacing:3px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+    border:1px solid black;
+    padding:26px 0px;
+  }
+  td.checkup{
+    background-color:red;
+    color:white;
+    font-size:50px;
+  }
+
+  #page-profil{
+    border-radius: 5px;
+    text-align: center;
+    background: #e0e0e0;
+    margin:0px 400px;
+    padding-bottom:20px;
+    padding-top:5px;
+    /*margin-top:150px;*/   
+  }
+  /*#form_edit{
+    border-radius: 5px;
+    text-align: center;
+    background: #e0e0e0;
+    margin:50px 100px;
+    padding-bottom:20px;
+    padding-top:5px;
+  }*/
