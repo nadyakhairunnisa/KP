@@ -1,8 +1,9 @@
-<!-- ini hanya percobaan -->
-
 <?php
-  include("proses/check_login.php");
-  include("koneksi/connect.php");
+  include("../proses/check_login.php");
+  include("../connect/connect.php");
+    $id=$_GET['id'];
+    $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
+    $pasien= mysqli_fetch_array($sql);
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +51,7 @@
                 <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
                 <li><a href="kelola_perkembangan_list.html" class="page-scroll">PERKEMBANGAN</a></li>                
                 <li><a class="page-scroll">Login As Perawat</a></li>                
-                <li><a href="proses/logout.php" class="page-scroll">Sign-Out</a></li>                
+                <li><a href="../proses/logout.php" class="page-scroll">Sign-Out</a></li>                
             </ul>              
           </div>        
         </div>        

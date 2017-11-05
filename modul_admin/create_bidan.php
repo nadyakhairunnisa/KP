@@ -1,6 +1,8 @@
 <?php
-    include "connect/connect.php";
-
+    include "../connect/connect.php";
+    $id=$_GET['id'];
+    $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
+    $pasien= mysqli_fetch_array($sql);
 ?>
 
 <!DOCTYPE html>

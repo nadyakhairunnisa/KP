@@ -13,13 +13,13 @@
 				$_SESSION['user']=$user;
 				if($result['kode_id']=='1'){
 					echo "<script> alert('Anda Berhasil Login');
-					window.location.href='../home_admin.php' </script>";
+					window.location.href='../modul_admin/home_admin.php' </script>";
 				} else if($result['kode_id']=='2'){
 					echo "<script> alert('Anda Berhasil Login');
-					window.location.href='../home_dokter.php' </script>";
+					window.location.href='../modul_dokter/home_dokter.php' </script>";
 				} else if($result['kode_id']=='3'){
 					echo "<script> alert('Anda Berhasil Login');
-					window.location.href='../home_pasien.php' </script>";
+					window.location.href='../modul_pasien/home_pasien.php' </script>";
 				}
 			}
 				
