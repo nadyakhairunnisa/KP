@@ -1,9 +1,6 @@
 <?php
   include("../proses/check_login.php");
   include("../connect/connect.php");
-    $id=$_GET['id'];
-    $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
-    $pasien= mysqli_fetch_array($sql);
 ?>
 
 <!DOCTYPE html>
@@ -46,10 +43,8 @@
           <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
                 <li><a href="#page-top" class="page-scroll top">HOME</a></li>
-                <li><a href="kelola_ibu.html" class="page-scroll">PASIEN</a></li>               
-                <li><a href="kelola_dokter.html" class="page-scroll">DOKTER</a></li>                
-                <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
-                <li><a href="kelola_perkembangan_list.html" class="page-scroll">PERKEMBANGAN</a></li>                
+                <li><a href="read_pasien.php" class="page-scroll">DATA PASIEN</a></li>               
+                <li><a href="read_bidan.php" class="page-scroll">DATA DOKTER</a></li>              
                 <li><a class="page-scroll">Login As Perawat</a></li>                
                 <li><a href="../proses/logout.php" class="page-scroll">Sign-Out</a></li>                
             </ul>              
@@ -57,9 +52,9 @@
         </div>        
       </nav>
 
-      <div class="col-md-12 hadmin">
+      <div class="col-md-12 hadmin" style="height:610px;">
       <h1 class="atas">Home Perawat</h1>
-        <a href="kelola_ibu.html">
+        <a href="read_pasien.php">
         <div class="col-md-6 pilih animated fadeInLeft flow1">
             <div class="kotok">        
                 <i class="fa fa-female fa-5x" aria-hidden="true"></i>
@@ -67,27 +62,11 @@
             </div>
         </div>
         </a>
-        <a href="kelola_dokter.html">
+        <a href="read_bidan.php">
         <div class="col-md-6 pilih  animated fadeInRight flow2">
             <div class="kotok">         
             <i class="fa fa-user-md fa-5x" aria-hidden="true"></i>
             <h1>Kelola Data Dokter</h1>
-            </div>
-        </div>
-        </a>
-        <a href="kelola_perkembangan_list.html">
-        <div class="col-md-6 pilih  animated fadeInLeft flow3">
-            <div class="kotok">        
-            <i class="fa fa-book fa-5x" aria-hidden="true"></i>
-            <h1>Kelola Data Perkembangan</h1>
-            </div>
-        </div>
-        </a>
-        <a href="kelola_jadwal.html">
-        <div class="col-md-6 pilih animated  fadeInRight flow4">
-            <div class="kotok">        
-            <i class="fa fa-calendar-plus-o fa-5x" aria-hidden="true"></i>
-            <h1>Kelola Jadwal Check - Up</h1>
             </div>
         </div>
         </a>

@@ -1,5 +1,6 @@
 <?php
-    include("connect/connect.php");
+    include("../proses/check_login.php");
+    include("../connect/connect.php");
     $id=$_GET['id'];
     $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
     $pasien= mysqli_fetch_array($sql);
@@ -46,13 +47,11 @@
 
           <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="home_admin.html" class="page-scroll top">HOME</a></li>
-                <li><a href="read_pasien.html" class="page-scroll">PASIEN</a></li>               
-                <li><a href="read_dokter.html" class="page-scroll">DOKTER</a></li>                
-                <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
-                <li><a href="read_perkembangan.html" class="page-scroll">PERKEMBANGAN</a></li>                
-                <li><a href="#" class="page-scroll">Login As Perawat</a></li>                
-                <li><a href="login_admin.html" class="page-scroll">Sign-Out</a></li>                    
+                <li><a href="home_admin.php" class="page-scroll top">HOME</a></li>
+                <li><a href="read_pasien.php" class="page-scroll">DATA PASIEN</a></li>               
+                <li><a href="read_bidan.php" class="page-scroll">DATA DOKTER</a></li>              
+                <li><a class="page-scroll">Login As Perawat</a></li>                
+                <li><a href="../proses/logout.php" class="page-scroll">Sign-Out</a></li>                    
             </ul>              
           </div>        
         </div>        
@@ -104,8 +103,7 @@
             echo "<td>$nama_wali</td>";
             echo "<td>$tanggal</td>";
             echo "<td>
-            <a href='edit_pasien.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'> Edit </a>
-            <a href='proses/pasien/delete_pasien.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal' onclick='return konfirmasi_hapus()'> Delete </a>
+            <a href='edit_pasien.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'>Edit</a>
           </td>";
   
           $no++;
@@ -113,92 +111,10 @@
 
         ?>
       </tbody> 
-
-
-              <!-- <tr>
-                <th>NAMA</th>
-                <th>USERNAME</th>
-                <th>PASSWORD</th>
-                <th>NO. HANDPHONE</th>
-                <th>ALAMAT</th>
-                <th>GOL. DARAH</th>
-                <th>NAMA WALI</th>
-                <th>NAMA DOKTER</th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>Dian R.</td>
-                <td>pas160609</td>
-                <td>pw160609</td>
-                <td>0812345678</td>
-                <td>Jl. Kaliurang</td>
-                <td>O</td>
-                <td>Ramadhan</td>
-                <td>dr. Nadya</td>
-                <td>
-                    <a href="form_ibu_edit.html"><button type="button" class="btn btn-info btn-lg" data-toggle="modal">Edit</button></a>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#delete">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Silvi A.</td>
-                <td>pas162911</td>
-                <td>pw162911</td>
-                <td>0898765432</td>
-                <td>Jl. Merapi</td>
-                <td>A</td>
-                <td>Feri</td>
-                <td>dr. Altus</td>
-                <td>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal">Edit</button>
-                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#delete">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Ghitta NH.</td>
-                <td>pas161204</td>
-                <td>pw160204</td>
-                <td>0898765432</td>
-                <td>Jl. Pamungkas</td>
-                <td>AB</td>
-                <td>Salman</td>
-                <td>dr. Hari</td>
-                <td>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal">Edit</button>
-                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#delete">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Dinda P.</td>
-                <td>pas163112</td>
-                <td>pw163112</td>
-                <td>0823545678</td>
-                <td>Jl. Besi</td>
-                <td>B</td>
-                <td>Farhan</td>
-                <td>dr. Nadya</td>
-                <td>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal">Edit</button>
-                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#delete">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Ningsih D.</td>
-                <td>pas162309</td>
-                <td>pw162309</td>
-                <td>0897645674</td>
-                <td>Jl. Ringroad</td>
-                <td>A</td>
-                <td>Doni</td>
-                <td>dr. Altus</td>
-                <td>
-                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal">Edit</button>
-                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#delete">Delete</button>
-                </td> -->
-              </tr>
-            </table>
+      </tr>
+      </table>
       </div>
-      <div class="col-md-1 kibu"><a href="create_pasien.php"><button>Tambah Data</button></a></div>
+
   <!-- This Background Slider -->
     <div id="delete" class="modal fade" role="dialog">
       <div class="modal-dialog">

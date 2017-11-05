@@ -1,5 +1,5 @@
 <?php
-	include('../../connect/connect.php');
+	include('../../../connect/connect.php');
 	$nama = $_POST['nama'];
 	$no_hp = $_POST['no_hp'];
 	$alamat = $_POST['alamat'];
@@ -38,6 +38,6 @@
 
 	mysqli_query($conn, "INSERT INTO pasien (user_id, nama, no_hp, alamat, gol_darah, usia, nama_wali, tanggal) values ('$user_id[id]', '$nama', '$no_hp', '$alamat', '$gol_darah', '$usia', '$nama_wali', '$date')");
 	
-	header("Location: ../../read_profil.php");
+	header("Location: ../../read_pasien.php");
 ?>
 

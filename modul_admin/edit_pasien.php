@@ -1,8 +1,9 @@
 <?php
-    include("connect/connect.php");
-    $id=$_GET['id'];
-    $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
-    $pasien= mysqli_fetch_array($sql);
+  include("../proses/check_login.php");
+  include("../connect/connect.php");
+  $id=$_GET['id'];
+  $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id='$id' LIMIT 1");
+  $pasien= mysqli_fetch_assoc($sql);
 ?>
 
 <!DOCTYPE html>
@@ -45,13 +46,11 @@
 
           <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="home_admin.html" class="page-scroll top">HOME</a></li>
-                <li><a href="read_pasien.html" class="page-scroll">PASIEN</a></li>               
-                <li><a href="read_dokter.html" class="page-scroll">DOKTER</a></li>                
-                <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
-                <li><a href="read_perkembangan.html" class="page-scroll">PERKEMBANGAN</a></li>                
-                <li><a href="#" class="page-scroll">Login As Perawat</a></li>                
-                <li><a href="login_admin.html" class="page-scroll">Sign-Out</a></li>               
+                <li><a href="home_admin.php" class="page-scroll top">HOME</a></li>
+                <li><a href="read_pasien.php" class="page-scroll">DATA PASIEN</a></li>               
+                <li><a href="read_bidan.php" class="page-scroll">DATA DOKTER</a></li>              
+                <li><a class="page-scroll">Login As Perawat</a></li>                
+                <li><a href="../proses/logout.php" class="page-scroll">Sign-Out</a></li>               
             </ul>              
           </div>        
         </div>        
@@ -60,6 +59,7 @@
       <h1 style="text-align: center; margin-top:85px; color:black;">Update Data Pasien</h1>
         <form action="proses/pasien/update_pasien.php" method="POST"  enctype="multipart/form-data" style="margin-top:50px;">
           <input type="hidden" name="id" value="<?php echo $pasien['id'];?>">
+          <input type="hidden" name="user_id" value="<?php echo $pasien['user_id'];?>">
           <label>Nama</label> <br>
                 <input id="nama" name="nama" type="text" placeholder="Nama" maxlength="255" value="<?php echo $pasien['nama'];?>"> <br>
             <label>No. Handphone</label> <br>
@@ -69,20 +69,19 @@
             <label>Golongan Darah</label> <br>
                  <div class="form-group" style="margin:0px 100px;">
                   <label for="sel1"></label>
-                  <select class="form-control" id="sel1">
+                  <select class="form-control" id="sel1" name="gol_darah">
                      <?php 
                       $query = mysqli_query($conn, "SELECT * FROM pasien");
                       while($data = mysqli_fetch_assoc($query)) {
                         $id = $data['id'];
                         $gol_darah = $data['gol_darah'];
                         if($id == $pasien['id']) {
-                             echo "<option value='$id' selected>$gol_darah</option>";       
-                         } else {
-                           echo "<option>A</option>";
-                           echo "<option>B</option>";
-                           echo "<option>AB</option>";
-                           echo "<option>O</option>";                 
-                         }                    }
+                          echo "<option value='$id' selected>$gol_darah</option>";       
+                          echo "<option>A</option>";
+                          echo "<option>B</option>";
+                          echo "<option>AB</option>";
+                          echo "<option>O</option>";                 
+                         }      }              
                    ?> 
                   </select>
                 </div>

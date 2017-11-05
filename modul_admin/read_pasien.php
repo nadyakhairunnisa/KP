@@ -1,6 +1,6 @@
 <?php
-    include "connect/connect.php";
-
+  include("../proses/check_login.php");
+  include("../connect/connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +43,11 @@
 
           <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="home_admin.html" class="page-scroll top">HOME</a></li>
-                <li><a href="read_pasien.html" class="page-scroll">PASIEN</a></li>               
-                <li><a href="read_dokter.html" class="page-scroll">DOKTER</a></li>                
-                <li><a href="kelola_jadwal.html" class="page-scroll">CHECK - UP</a></li>                
-                <li><a href="read_perkembangan.html" class="page-scroll">PERKEMBANGAN</a></li>                
-                <li><a href="#" class="page-scroll">Login As Perawat</a></li>                
-                <li><a href="login_admin.html" class="page-scroll">Sign-Out</a></li>                    
+                <li><a href="home_admin.php" class="page-scroll top">HOME</a></li>
+                <li><a href="#page-top" class="page-scroll">DATA PASIEN</a></li>               
+                <li><a href="read_bidan.php" class="page-scroll">DATA DOKTER</a></li>              
+                <li><a class="page-scroll">Login As Perawat</a></li>                
+                <li><a href="../proses/logout.php" class="page-scroll">Sign-Out</a></li>                    
             </ul>              
           </div>        
         </div>        
@@ -77,8 +75,9 @@
             echo "<td>$no</td>";
             echo "<td>$nama</td>";
             echo "<td>
-            <a href='read_profil.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'> Profil </a>
-            <a href='reas_perkembangan.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'> Perkembangan </a>
+            <a href='read_profil_pasien.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'>Profil</a>
+            <a href='read_perkembangan.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'>Perkembangan</a>
+            <a href='proses/pasien/delete_pasien.php?id=$id' type='button' class='btn btn-info btn-lg' data-toggle='modal'>Hapus</a>
           </td>";
   
           $no++;

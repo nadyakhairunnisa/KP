@@ -11,15 +11,15 @@
 			if($result){
 				session_start();
 				$_SESSION['user']=$user;
-				if($result['kode_id']=='1'){
-					echo "<script> alert('Anda Berhasil Login');
+				if($result['grup_id']=='1'){
+					echo "<script> alert('Selamat datang PERAWAT!');
 					window.location.href='../modul_admin/home_admin.php' </script>";
-				} else if($result['kode_id']=='2'){
-					echo "<script> alert('Anda Berhasil Login');
-					window.location.href='../modul_dokter/home_dokter.php' </script>";
-				} else if($result['kode_id']=='3'){
-					echo "<script> alert('Anda Berhasil Login');
-					window.location.href='../modul_pasien/home_pasien.php' </script>";
+				} else if($result['grup_id']=='2'){
+					echo "<script> alert('Selamat datang DOKTER!');
+					window.location.href='../modul_dokter/home_dokter.php?id=$result[id]' </script>";
+				} else if($result['grup_id']=='3'){
+					echo "<script> alert('Selamat datang CALON IBU!');
+					window.location.href='../modul_pasien/home_pasien.php?id=$result[id]' </script>";
 				}
 			}
 				
