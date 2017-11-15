@@ -46,17 +46,22 @@
             <input type="text" name="nama" placeholder="Camila Havana"><br>
             <label>No HP</label>
             <input type="text" name="nama" placeholder="085299228364"><br>
-            <label>Gol Darah</label>
-            <input type="text" name="nama" placeholder="B"><br>
+            <label style="margin-top: 10px;">Golongan Darah</label>
+               <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
+                   <option>A</option>
+                   <option>B</option>
+                   <option>AB</option>
+                   <option>O</option>
+               </select> 
             <label>Usia</label>
             <input type="text" name="nama" placeholder="25"><br>
             <label>Alamat</label>
             <input type="text" name="nama" placeholder="Jalan Magelang"><br>
             <label>Nama Wali</label>
             <input type="text" name="nama" placeholder="Ed Mars"><br>
-            <div style="text-align:center;" >
-                <input  onclick="change()" type="button" value="Edit" id="myButton1" />
-            </div>    
+            <div class="text-center" id="kelola">
+                <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_pasien.html" style="background: #ff6666">Submit</a>
+            </div>  
         </div> 
               
     </div>    
