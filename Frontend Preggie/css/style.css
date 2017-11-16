@@ -407,7 +407,7 @@
 }
 
  .col-md-7.edit #myButton1{
-     font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-family: 'Raleway', sans-serif;
     letter-spacing:0.5px;
     font-size: 18px;
@@ -558,4 +558,16 @@
     background: -moz-linear-gradient(right, #ff9999 20%, #ff6666 100%);
     background: linear-gradient(to right, #ff9999 20%, #ff6666 100%);
     box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+  }
+
+  #kelola a{
+     width: 30%;
+     margin-top: 20px;
+     font-size: 16px;
+     font-weight: 600;
+     color: #ffffff;
+  }
+
+  .dpasien.dokter a{
+    width: 80%
   }
