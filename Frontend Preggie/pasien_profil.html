@@ -25,10 +25,10 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html"></a>
+          <a class="navbar-brand" href="pasien_home.html"></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">Home</a></li>          
+          <li><a href="pasien_home.html">Home</a></li>          
           <li class="active"><a href="pasien_profil">Profil</a></li>
           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
@@ -55,13 +55,13 @@
                </select> 
             <label>Usia</label>
             <input type="text" name="nama" placeholder="25"><br>
-            <label>Alamat</label>
-            <input type="text" name="nama" placeholder="Jalan Magelang"><br>
+            <label style="margin-top: 45px">Alamat</label>
+            <textarea class="form-control col-md-offset-2"  type="text" name="nama" style="width: 85%; height: 90px;margin-top: 25px;"></textarea><br>
             <label>Nama Wali</label>
             <input type="text" name="nama" placeholder="Ed Mars"><br>
-            <div class="text-center" id="kelola">
-                <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_pasien.html" style="background: #ff6666">Submit</a>
-            </div>  
+           <div style="text-align:center;" >
+                <input  onclick="change()" type="button" value="Edit" id="myButton1" />
+            </div>    
         </div> 
               
     </div>    
