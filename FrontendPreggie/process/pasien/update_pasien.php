@@ -1,5 +1,5 @@
 <?php
-	include("../../../connect/connect.php");
+	include("../../connect/connect.php");
 	$id = $_POST['id'];
 	$user_id = $_POST['user_id'];
 	$nama = $_POST['nama'];
@@ -41,6 +41,3 @@
 		header("Location: ../../read_profil_pasien.php?id=$id");
 	}
 ?>
-
-
-
