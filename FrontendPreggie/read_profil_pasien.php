@@ -52,9 +52,9 @@
             <input type="hidden" value="<?php echo $id ?>" name="id">
             <input type="hidden" value="<?php echo $pasien['user_id'] ?>" name="id">
             <label>Nama</label>
-            <input type="text" name="nama" <?php echo("placeholder='$pasien[nama]'"); ?>><br>
+            <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>"><br>
             <label>No HP</label>
-            <input type="text" name="no_hp" <?php echo("placeholder='$pasien[no_hp]'"); ?>><br>
+            <input type="text" name="no_hp" value="<?php echo $pasien['no_hp']; ?>"><br>
             <label>Gol Darah</label>
             <!-- <input type="text" name="gol_darah" <?php echo("placeholder='$pasien[gol_darah]'"); ?>><br> -->
             <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
@@ -64,15 +64,15 @@
                 <option>O</option>
             </select> 
             <label>Usia</label>
-            <input type="text" name="usia" <?php echo("placeholder='$pasien[usia]'"); ?>><br>
+            <input type="text" name="usia" value="<?php echo $pasien['usia']; ?>"><br>
             <label>Alamat</label>
-            <input type="text" name="alamat" <?php echo("placeholder='$pasien[alamat]'"); ?>><br>
+            <input type="text" name="alamat" value="<?php echo $pasien['alamat']; ?>"><br>
             <label>Nama Wali</label>
-            <input type="text" name="nama_wali" <?php echo("placeholder='$pasien[nama_wali]'"); ?>><br>
+            <input type="text" name="nama_wali" value="<?php echo $pasien['nama_wali']; ?>"><br>
              <div class="form-group last">
                 <div class="text-center" id="kelola">
                     <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
-                    <a onclick="konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/pasien/delete_pasien.php?id=$pasien[id]" style="color: #ff6666">Delete</a>
+                    <a onclick="konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/pasien/delete_pasien.php?id=$id" style="color: #ff6666">Delete</a>
                 </div>
             </div>
         </div> 

@@ -76,6 +76,7 @@
                             <a class='btn btn-sm' href='read_profil_dokter.php?id=$id'>Lihat Profil</a>
                             </div></td>";
                             echo "</tr>";
+                        }
                     ?>
                 <!-- </tr> -->
                 <!-- <tr>

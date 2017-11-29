@@ -9,10 +9,10 @@
 
     <!-- Bootstrap -->    
     <link rel="stylesheet" href="css/bootstrap.css">    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--   Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -47,27 +47,14 @@
                             <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" required>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-8">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"/>
-                                    Ingatkan saya
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-group last">
                         <div class="col-md-12 text-center" >
+                            <!-- <a class="btn btn-sm" href="pasien_home.html" style="background: #ff6666">Sign in</a> -->
                             <button type="submit" name="login" style="border: none; background: #ff6666;"><div class="btn btn-sm">Sign In</div></button></a>
-                            <!-- <a class="btn btn-sm" style="background: #ff6666">Sign in</a> -->
-                            <a class="btn btn-default btn-sm" href="login.html" >Reset</a>
+                            <a class="btn btn-default btn-sm" href="login.php" >Reset</a>
                         </div>
                     </div>
                     </form>
-                </div>
-                <div class="panel-footer">
-                    Lupa Password? <a href="#">Klik disini</a></div>
                 </div>
            </div>
            <!--  Login end -->

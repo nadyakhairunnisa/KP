@@ -12,6 +12,6 @@
 	$query = mysqli_query($conn, "UPDATE pasien set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', gol_darah = '$gol_darah', usia = '$usia', nama_wali = '$nama_wali', tanggal = '$date' WHERE id = '$id'");
 
 	if($query){
-		header("Location: ../../profil_pasien.php?id=$id");
+		header("Location: ../../pasien_profil.php?id=$id");
 	}
 ?>

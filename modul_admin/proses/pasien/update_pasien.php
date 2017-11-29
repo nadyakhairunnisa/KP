@@ -13,16 +13,22 @@
 	$tahun=$array[0];
 
 	$tgl = mysqli_query($conn, "SELECT tanggal FROM pasien WHERE id='$id'");
+	$tgls = mysqli_fetch_array($tgl);
+	$tgl = $tgls['tanggal'];
+	
 	$arrays=explode("-", $tgl);
 	$tahunold=$arrays[0];
 
 	if($tahunold != $tahun){		
 		$sql = mysqli_query($conn, "SELECT username FROM user WHERE id='$user_id'");
+	$sql = mysqli_fetch_array($sql);
+	$sql = $sql['username'];
 		
-		$unameid = substr($sql,4,3);
-
+		$unameid = substr($sql,-3);
+echo $unameid . '<hr>';
 		$username = 'PS'.($tahun-2000).$unameid;
-
+echo $username;
+die;
 		$result = mysqli_query($conn, "UPDATE user set username = '$username' WHERE id = '$user_id'");
 
 		// $password = rand();

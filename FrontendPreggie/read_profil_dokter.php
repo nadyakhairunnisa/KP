@@ -50,16 +50,16 @@
         <div class="col-md-12 input"> 
         <form class="form-horizontal" role="form" method="post" action="process/dokter/update_dokter.php" align=""> 
             <input type="hidden" value="<?php echo $id ?>" name="id">
-            <input type="hidden" value="<?php echo $bidan['user_id'] ?>" name="id">
+            <input type="hidden" value="<?php echo $bidan['user_id'] ?>" name="user_id">
             <label>Nama</label>
-            <input type="text" name="nama" <?php echo("placeholder='$bidan[nama]'"); ?>><br>
+            <input type="text" name="nama" value="<?php echo $bidan['nama']; ?>"><br>
             <label>No HP</label>
-            <input type="text" name="no_hp" <?php echo("placeholder='$bidan[no_hp]'"); ?>><br>
+            <input type="text" name="no_hp" value="<?php echo $bidan['no_hp']; ?>"><br>
             <label>Alamat</label>
-            <input type="text" name="alamat" <?php echo("placeholder='$bidan[alamat]'"); ?>><br>
-              <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
-              <!-- <a onclick="konfirmasi_ubah()" class="btn btn-sm" href="read_daftar_dokter.html" style="background: #ff6666">Simpan</a> -->
-              <a onclick="konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/dokter/delete_dokter.php?id=$bidan[id]" style="color: #ff6666">Delete</a>
+            <input type="text" name="alamat" value="<?php echo $bidan['alamat']; ?>"><br>
+              <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
+              <!-- <a onclick="return konfirmasi_ubah()" class="btn btn-sm" href="process/dokter/update_dokter.php" style="background: #ff6666">Simpan</a> -->
+              <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/dokter/delete_dokter.php?id=<?php echo $id;?>" style="color: #ff6666">Delete</a>
               </div>  
         </div> 
               

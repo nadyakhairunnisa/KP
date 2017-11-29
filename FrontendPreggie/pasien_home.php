@@ -1,4 +1,7 @@
 <?php
+//$bulan = date('n');
+//$bulan = 6;
+//echo date("j", mktime(0, 0, 0, $bulan+1, 0, date('Y')));die;
   include("process/check_login.php");
   include("connect/connect.php");
   $id=$_GET['id'];
@@ -127,6 +130,7 @@
           <p>Minggu</p>
         </div>
         <div class="date">
+         <p></p>
           <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p>
           <p>8</p><p class="active_1" data-toggle="collapse" data-target="#data_1">9</p><p>10</p><p>11</p><p>12</p><p>13</p><p class="active_2" data-toggle="collapse" data-target="#data_2">14</p>
           <p>15</p><p>16</p><p>17</p><p class="active_3" data-toggle="collapse" data-target="#data_3">18</p><p>19</p><p>20</p><p>21</p>
