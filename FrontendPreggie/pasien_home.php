@@ -5,7 +5,7 @@
   include("process/check_login.php");
   include("connect/connect.php");
   $id=$_GET['id'];
-  $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE user_id =$id LIMIT 1");
+  $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
   $pasien = mysqli_fetch_array($sql);
 ?>
 

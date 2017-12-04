@@ -42,7 +42,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='hread_profil_dokter.php?id=$bidan[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -57,7 +57,7 @@
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><span  style="font-weight: 600; font-size: 20px"><?php echo $p['jadwal_check']; ?></span>
         <br><br><?php echo $pasien['nama']; ?>
-        <br><br><?php echo $p['usia_knd']; ?></h5>
+        <br><br><?php echo $p['usia_knd']." Minggu"; ?></h5>
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -87,7 +87,7 @@
       </div>
 
       <div class="col-md-6 up">
-        <img id="usg" src="images/usg.jpg">        
+        <img id="usg" src="<?php echo $p['gambar']; ?>">        
       </div>
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">

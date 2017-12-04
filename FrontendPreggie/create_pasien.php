@@ -47,9 +47,9 @@
         <div class="col-md-12 input"> 
         <form class="form-horizontal" role="form" method="post" action="process/pasien/add_pasien.php" align="">
             <label>Nama</label>
-            <input type="text" name="nama"><br>
+            <input type="text" name="nama" required><br>
             <label>No HP</label>
-            <input type="text" name="no_hp">
+            <input type="text" name="no_hp" required>
             <label style="margin-top: 10px;">Golongan Darah</label>
                <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
                    <option>A</option>
@@ -58,17 +58,17 @@
                    <option>O</option>
                </select> 
             <label>Usia</label>
-            <input type="text" name="usia"><br>
+            <input type="text" name="usia" required><br>
             <label>Alamat</label>
-            <input type="text" name="alamat"><br>
+            <input type="text" name="alamat" required><br>
             <label>Nama Wali</label>
-            <input type="text" name="nama_wali"><br>
+            <input type="text" name="nama_wali" required><br>
             <label>Tanggal</label>
-            <input type="date" name="tanggal"><br>
+            <input type="date" name="tanggal" required><br>
              <div class="form-group last">
                 <div class="text-center" id="kelola">
-                    <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_tambah()" class="btn btn-sm">Simpan</div></button></a>
-                    <a onclick="konfirmasi_hapus()" class="btn btn-default btn-sm" href="read_daftar_pasien.php" style="color: #ff6666">Cancel</a>
+                    <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" class="btn btn-sm">Simpan</div></button></a>
+                    <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="read_daftar_pasien.php" style="color: #ff6666">Cancel</a>
                 </div>
             </div>
         </div> 

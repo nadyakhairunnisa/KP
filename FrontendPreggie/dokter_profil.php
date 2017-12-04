@@ -25,26 +25,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("#konten-ajax").load(<?php echo("href='content/read_profil_dokter.php?id=$bidan[id]'"); ?>);
-      });
-      $(function(){
-        $("#menu a").click(function(){
-          url = $(this).attr("href");
-          $("#konten-ajax").load(url);
-          return false;
-        });
-        $(document).ajaxStart(function(){
-          $("#konten-ajax").css({'display':'none'});
-        });
-        $(document).ajaxComplete(function(){
-          $("#konten-ajax").slideUp('slow');
-        });
-      });
-    </script> -->
 </head>
 
     <body style="background:#fafafa;">
@@ -57,7 +37,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='hread_profil_dokter.php?id=$bidan[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -79,7 +59,7 @@
             <label>Alamat</label>
             <input type="text" name="alamat" value="<?php echo $bidan['alamat']; ?>"><br>
             <div style="text-align:center;" >
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="change()" class="btn btn-sm">Simpan</div></button></a>
+                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return change()" class="btn btn-sm">Simpan</div></button></a>
                 <!-- <input  onclick="change()" type="button" value="Edit" id="myButton1" /> -->
             </div>    
         </div> 

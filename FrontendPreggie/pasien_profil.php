@@ -70,8 +70,8 @@
             <label>Nama Wali</label>
             <input type="text" name="nama_wali" value="<?php echo $pasien['nama_wali']; ?>"><br>
             <div class="text-center" id="kelola">
-                <!-- <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_ubah()" class="btn btn-sm">Submit</div></button></a> -->
-                <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="process/pasien/update_profil_pasien.php" style="background: #ff6666">Submit</a>
+                <button type="submit" name="update" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Submit</div></button></a>
+                <!-- <a onclick="return konfirmasi_tambah()" class="btn btn-sm" href="process/pasien/update_profil_pasien.php" style="background: #ff6666">Submit</a> -->
             </div>  
         </div> 
               

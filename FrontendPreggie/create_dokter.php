@@ -47,15 +47,15 @@
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/dokter/add_dokter.php" align=""> 
             <label>Nama</label>
-            <input type="text" name="nama" placeholder="Nama"><br>
+            <input type="text" name="nama" placeholder="Nama" required><br>
             <label>No. HP</label>
-            <input type="text" name="no_hp" placeholder="No.HP"><br>
+            <input type="text" name="no_hp" placeholder="No.HP" required><br>
             <label>Alamat</label>
-            <input type="text" name="alamat" placeholder="Alamat"><br>
+            <input type="text" name="alamat" placeholder="Alamat" required><br>
             <label>Tanggal</label>
-            <input type="date" name="tanggal" placeholder="Tanggal"><br>
+            <input type="date" name="tanggal" placeholder="Tanggal" required><br>
             <div class="text-center" id="kelola">
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_tambah()" class="btn btn-sm">Submit</div></button></a>
+                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" class="btn btn-sm">Submit</div></button></a>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_dokter.html" style="background: #ff6666">Submit</a> -->
             </div>  
         </div> 

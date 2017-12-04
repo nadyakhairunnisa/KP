@@ -4,6 +4,8 @@
   $id=$_GET['id'];
   $sql = mysqli_query($conn, "SELECT * FROM perkembangan WHERE id =$id LIMIT 1");
   $p = mysqli_fetch_array($sql);
+  $sql2 = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$p[pasien_id] LIMIT 1");
+  $pasien = mysqli_fetch_array($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +50,8 @@
     <div class="container-fluid">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><span  style="font-weight: 600; font-size: 20px"><?php echo $p['jadwal_check']; ?></span>
-        <br><br><?php echo $p['nama']; ?>
-        <br><br><?php echo $p['usia_knd']; ?></h5>
+        <br><br><?php echo $pasien['nama']; ?>
+        <br><br><?php echo $p['usia_knd']." Minggu"; ?></h5>
         
         <table class="table table-hover">
             <thead>
@@ -80,7 +82,7 @@
       </div>
 
       <div class="col-md-6 up">
-        <img id="usg" src="images/usg.jpg">        
+        <img id="usg" src="<?php echo $p['gambar']; ?>">        
       </div>
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">
@@ -101,8 +103,8 @@
 
             <div class="form-group last">
                 <div class="col-md-6 text-center" id="kelola">
-                    <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=$p[pasien_id]" style="background: #ff6666">Simpan</a>
-                    <a class="btn btn-default btn-sm" href="process/delete_perkembangan.php?id=$p[id]" style="color: #ff6666">Delete</a>
+                    <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a>
+                    <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666">Delete</a>
                 </div>
             </div>
 

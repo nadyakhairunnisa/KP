@@ -5,7 +5,7 @@
     $p_id=$_GET['p_id'];
     $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$id LIMIT 1");
     $bidan = mysqli_fetch_array($sql);
-    $sql2 = mysqli_query($conn, "SELECT * FROM pasien WHERE user_id =$id LIMIT 1");
+    $sql2 = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$p_id LIMIT 1");
     $pasien = mysqli_fetch_array($sql2);
 ?>
 
@@ -39,7 +39,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='hread_profil_dokter.php?id=$bidan[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -87,9 +87,9 @@
                         echo "<tr>";
                         echo "<td>$tanggal</td>";
                         echo "<td>$bidan</td>";
-                        echo "<td>$usia_knd"."'Minggu'</td>";
+                        echo "<td>$usia_knd"." Minggu</td>";
                         echo "<td>
-                        <div class='lihat'><a class='btn btn-sm' href='read_perkembangan.php?id=$id&p_id=$pasien[id]&pkmb_id=$pkmb_id'>Lihat Perkembangan</a></div>
+                        <div class='lihat'><a class='btn btn-sm' href='dokter_perkembangan.php?id=$id&p_id=$pasien[id]&pkmb_id=$pkmb_id'>Lihat Perkembangan</a></div>
                         </td>";
                         echo "</tr>";
                     }

@@ -4,6 +4,8 @@
   $id=$_GET['id'];
   $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$id LIMIT 1");
   $bidan = mysqli_fetch_array($sql);
+  $sql2 = mysqli_query($conn, "SELECT * FROM user WHERE id =$bidan[user_id] LIMIT 1");
+  $user = mysqli_fetch_array($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +59,11 @@
             <input type="text" name="no_hp" value="<?php echo $bidan['no_hp']; ?>"><br>
             <label>Alamat</label>
             <input type="text" name="alamat" value="<?php echo $bidan['alamat']; ?>"><br>
+            <label>Tanggal Masuk</label>
+            <input type="date" name="tanggal" value="<?php echo $bidan['tanggal']; ?>"><br><br>
+            <label>Username</label>
+            <!-- <input type="text" name="uname" value="<?php echo $user['username']; ?>"><br><br> -->
+            <p><?php echo $user['username']; ?></p><br><br><br>
               <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
               <!-- <a onclick="return konfirmasi_ubah()" class="btn btn-sm" href="process/dokter/update_dokter.php" style="background: #ff6666">Simpan</a> -->
               <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/dokter/delete_dokter.php?id=<?php echo $id;?>" style="color: #ff6666">Delete</a>

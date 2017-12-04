@@ -21,14 +21,14 @@
 
 	if($tahunold != $tahun){		
 		$sql = mysqli_query($conn, "SELECT username FROM user WHERE id='$user_id'");
-	$sql = mysqli_fetch_array($sql);
-	$sql = $sql['username'];
+		$sql = mysqli_fetch_array($sql);
+		$sql = $sql['username'];
 		
 		$unameid = substr($sql,-3);
-echo $unameid . '<hr>';
+		//echo $unameid . '<hr>';
 		$username = 'PS'.($tahun-2000).$unameid;
-echo $username;
-die;
+		//echo $username;
+		//die;
 		$result = mysqli_query($conn, "UPDATE user set username = '$username' WHERE id = '$user_id'");
 
 		// $password = rand();

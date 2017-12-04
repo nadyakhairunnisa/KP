@@ -4,6 +4,8 @@
   $id=$_GET['id'];
   $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
   $pasien = mysqli_fetch_array($sql);
+  $sql2 = mysqli_query($conn, "SELECT * FROM user WHERE id =$pasien[user_id] LIMIT 1");
+  $user = mysqli_fetch_array($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +52,7 @@
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/pasien/update_pasien.php" align=""> 
             <input type="hidden" value="<?php echo $id ?>" name="id">
-            <input type="hidden" value="<?php echo $pasien['user_id'] ?>" name="id">
+            <input type="hidden" value="<?php echo $pasien['user_id'] ?>" name="user_id">
             <label>Nama</label>
             <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>"><br>
             <label>No HP</label>
@@ -69,10 +71,15 @@
             <input type="text" name="alamat" value="<?php echo $pasien['alamat']; ?>"><br>
             <label>Nama Wali</label>
             <input type="text" name="nama_wali" value="<?php echo $pasien['nama_wali']; ?>"><br>
+            <label>Tanggal Masuk</label>
+            <input type="date" name="tanggal" value="<?php echo $pasien['tanggal']; ?>"><br><br>
+            <label>Username</label>
+            <!-- <input type="text" name="uname" value="<?php echo $user['username']; ?>"><br><br> -->
+            <p><?php echo $user['username']; ?></p><br><br><br>
              <div class="form-group last">
                 <div class="text-center" id="kelola">
-                    <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
-                    <a onclick="konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/pasien/delete_pasien.php?id=$id" style="color: #ff6666">Delete</a>
+                    <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
+                    <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/pasien/delete_pasien.php?id=<?php echo $id;?>" style="color: #ff6666">Delete</a>
                 </div>
             </div>
         </div> 

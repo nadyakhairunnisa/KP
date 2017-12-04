@@ -2,7 +2,7 @@
     include("process/check_login.php");
     include("connect/connect.php");
     $id=$_GET['id'];
-    $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE user_id =$id LIMIT 1");
+    $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$id LIMIT 1");
     $bidan = mysqli_fetch_array($sql);
 ?>
 
@@ -34,7 +34,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='hread_profil_dokter.php?id=$bidan[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -75,13 +75,13 @@
 
                       $p_id = $row['id'];
                       $nama = $row['nama'];
-                      $data = mysqli_query($conn,"SELECT * FROM perkembangan WHERE pasien_id=$id");
+                      $data = mysqli_query($conn,"SELECT * FROM perkembangan WHERE pasien_id=$p_id");
                       $jumlah = mysqli_num_rows($data);
 
                       echo "<tr>";
                       echo "<td>$nama</td>";
                       echo "<td>$jumlah</td>";
-                      echo "<td><div class='lihat'><a class='btn btn-sm' href='dokter_perkembangan.php?id=$id&p_id=$p_id'>
+                      echo "<td><div class='lihat'><a class='btn btn-sm' href='dokter_daftar_perkembangan.php?id=$id&p_id=$p_id'>
                     Lihat Perkembangan</a></div></td>"; 
                       echo "</tr>";
                     } ?>

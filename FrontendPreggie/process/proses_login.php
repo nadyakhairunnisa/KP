@@ -15,11 +15,15 @@
 					echo "<script> alert('Selamat datang PERAWAT!');
 					window.location.href='../admin_home.php' </script>";
 				} else if($result['grup_id']=='2'){
+					$query = mysqli_query($conn, "SELECT id FROM bidan WHERE user_id = $result[id]");
+					$id = mysqli_fetch_assoc($query);
 					echo "<script> alert('Selamat datang DOKTER!');
-					window.location.href='../dokter_home.php?id=$result[id]' </script>";
+					window.location.href='../dokter_home.php?id=$id[id]' </script>";
 				} else if($result['grup_id']=='3'){
+					$query = mysqli_query($conn, "SELECT id FROM pasien WHERE user_id = $result[id]");
+					$id = mysqli_fetch_assoc($query);
 					echo "<script> alert('Selamat datang CALON IBU!');
-					window.location.href='../pasien_home.php?id=$result[id]' </script>";
+					window.location.href='../pasien_home.php?id=$id[id]' </script>";
 				}
 			}
 				

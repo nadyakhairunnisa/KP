@@ -61,33 +61,34 @@
                 ?>
             </select>
             <label>Jadwal Check Up</label>
-            <input type="date" name="jadwal_check"><br>
+            <input type="date" name="jadwal_check" required><br>
             <label>Usia Kandungan</label>
-            <input type="text" name="usia_knd"><br>
+            <input type="text" name="usia_knd" placeholder="Minggu"><br>
             <label>Berat Kandungan</label>
-            <input type="text" name="berat_knd"><br>
+            <input type="text" name="berat_knd" placeholder="gram"><br>
             <label>Tensi</label>
-            <input type="text" name="tensi" ><br>
+            <input type="text" name="tensi" placeholder="mmHg"><br>
             <label>Detak Jantung</label>
-            <input type="text" name="detak_jantung" ><br>
+            <input type="text" name="detak_jantung" placeholder="bpm"><br>
             <label>Tinggi Badan</label>
-            <input type="text" name="tinggi_badan" ><br>
+            <input type="text" name="tinggi_badan" placeholder="cm"><br>
             <label>Berat Badan</label>
-            <input type="text" name="berat_badan" ><br>
+            <input type="text" name="berat_badan" placeholder="kg"><br>
             <label style="margin-top: 45px">Keterangan</label>
-            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;"></textarea><br>
-            <label>Jadwal Selanjutnya</label>
-            <input type="date" name="jadwal_next" ><br>
-            <label>Status</label>
-            <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
+            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;"><p>Keluhan:                          </p>
+<p>Rekomendasi:                </p>
+<p>Obat:                                </p></textarea><br>
+            <!-- <label>Status</label> -->
+            <!-- <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
                <option>Hadir</option>
                <option>Belum Hadir</option>
-            </select>
+            </select> -->
             <label>Gambar</label> 
                 <input type="file" name="gambar"> <br>
            
             <div class="text-center" id="kelola">
-                <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_perkembangan.php" style="background: #ff6666">Submit</a>
+                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" class="btn btn-sm">Submit</div></button></a>
+                <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_perkembangan.php" style="background: #ff6666">Submit</a> -->
             </div> 
         </div> 
               

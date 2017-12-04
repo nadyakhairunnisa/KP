@@ -59,7 +59,7 @@
             <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search" ></i></button>
         </div>
         <div class="input-group-vertical text-right"  >
-            <a class="btn btn-default" href="create_perkembangan.php?id=$pasien[id]" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
+            <a class="btn btn-default" href="create_perkembangan.php?id=<?php echo $pasien['id'];?>" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
         </form>
      <!-- Kolom search end -->
 
@@ -85,7 +85,7 @@
                             echo "<tr>";
                             echo "<td>$tanggal</td>";
                             echo "<td>$bidan</td>";
-                            echo "<td>$usia_knd"."'Minggu'</td>";
+                            echo "<td>$usia_knd"." Minggu</td>";
                             echo "<td>
                             <div class='lihat'><a class='btn btn-sm' href='read_perkembangan.php?id=$id'>Lihat Perkembangan</a></div>
                             </td>";

@@ -84,7 +84,7 @@
       </div>
 
       <div class="col-md-6 up">
-        <img id="usg" src="images/usg.jpg">        
+        <img id="usg" src="<?php echo $p['gambar']; ?>">        
       </div>
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">
