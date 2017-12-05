@@ -76,6 +76,8 @@
             <label>Username</label>
             <!-- <input type="text" name="uname" value="<?php echo $user['username']; ?>"><br><br> -->
             <p><?php echo $user['username']; ?></p><br><br><br>
+            <label>Password</label>
+            <p><?php echo $user['password']; ?></p><br><br><br>
              <div class="form-group last">
                 <div class="text-center" id="kelola">
                     <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Simpan</div></button></a>
