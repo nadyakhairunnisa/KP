@@ -21,10 +21,7 @@
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--   Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/js.js"></script>
+   
 </head>
 
     <body style="background:#fafafa;">
@@ -36,8 +33,8 @@
           <a class="navbar-brand" <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
+          <li class="active"><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -58,16 +55,34 @@
             <input type="text" name="no_hp" value="<?php echo $bidan['no_hp']; ?>"><br>
             <label>Alamat</label>
             <input type="text" name="alamat" value="<?php echo $bidan['alamat']; ?>"><br>
+            <label>Username</label>
+            <input type="text" name="uname" value="<?php echo $user['username']; ?>" readonly>
+            <label>Password</label>
+            <input type="text" name="password" value="<?php echo $user['password']; ?>">
             <div style="text-align:center;" >
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return change()" class="btn btn-sm">Simpan</div></button></a>
+                <button class="btn btn-md" type="submit" name="login" style="width: 25%; background: #ff6666; margin-top: 40px"><div onclick="return change()" >Simpan</div></button></a>
                 <!-- <input  onclick="change()" type="button" value="Edit" id="myButton1" /> -->
             </div>    
         </div> 
-              
+        <br><br><br>
+        <a href="dokter_home.php" class="btn btn-default btn-md" style="width: 22%; color: #ff6666; margin: 30px">
+        <span class="glyphicon glyphicon-backward"></span> Kembali
+        </a>      
     </div>    
     <div class="col-md-5 edit">
         <img src="images/mother.png">
     </div>      
+
+    <div class="col-md-12" >
+    <footer class="navbar navbar-default text-center bottom" style="padding-top: 20px; color: #737373">
+        Copyright &copy Teknik Informatika UII 2017. All right reserved
+    </footer>
+    </div>
+
+     <!--   Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
 
     </body>
   </html>

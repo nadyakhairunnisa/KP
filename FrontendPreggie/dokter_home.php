@@ -143,7 +143,7 @@
         </div>           
      </div>
 
-    <footer class="navbar navbar-default navbar-fixed-bottom text-center" style="padding-top: 20px; color: #737373">
+    <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>
 

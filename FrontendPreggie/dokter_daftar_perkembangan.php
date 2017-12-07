@@ -24,9 +24,7 @@
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--   Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 </head>
 
     <body style="background:#fafafa;">
@@ -124,7 +122,13 @@
       </div>
     </div>
 
-
-        
+     <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373">
+        Copyright &copy Teknik Informatika UII 2017. All right reserved
+    </footer>
+    
+    <!--   Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
     </body>
   </html>
