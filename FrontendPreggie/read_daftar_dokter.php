@@ -30,6 +30,7 @@
           <a class="navbar-brand" href="admin_home.php"></a>
         </div>
          <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="admin_home.php">Home</a></li> 
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
          </ul>
       </div>
@@ -142,5 +143,15 @@
         </div>
         </div>           
      </div>
+
+     <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373">
+        Copyright &copy Teknik Informatika UII 2017. All right reserved
+    </footer>
+
+     <!--   Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+    
     </body>
   </html>

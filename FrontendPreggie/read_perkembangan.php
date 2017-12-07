@@ -37,6 +37,7 @@
           <a class="navbar-brand" href="admin_home.php"></a>
         </div>
          <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="admin_home.php">Home</a></li> 
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
          </ul>
       </div>

@@ -33,6 +33,7 @@
           <a class="navbar-brand" href="admin_home.php"></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="admin_home.php">Home</a></li> 
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -55,7 +56,7 @@
             <label>Tanggal</label>
             <input type="date" name="tanggal" placeholder="Tanggal" required><br>
             <div class="text-center" id="kelola">
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" class="btn btn-sm">Submit</div></button></a>
+                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_dokter.html" style="background: #ff6666">Submit</a> -->
             </div>  
         </div> 

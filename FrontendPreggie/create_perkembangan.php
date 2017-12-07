@@ -36,6 +36,7 @@
           <a class="navbar-brand" href="admin_home.php"></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="admin_home.php">Home</a></li> 
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -49,7 +50,7 @@
     <div class="col-md-7 edit">        
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/perkembangan/add_perkembangan.php" align=""> 
-            <input type="hidden" value="<?php echo $id ?>" name="id">
+            <input type="hidden" value="<?php echo $id ?>" name="id"><br>
             <label>Nama Dokter</label>
             <select class="form-control col-md-offset-2" name="bidan" style="width: 85%; height: 40px;margin-top: 25px;">
                 <?php 
@@ -75,9 +76,9 @@
             <label>Berat Badan</label>
             <input type="text" name="berat_badan" placeholder="kg"><br>
             <label style="margin-top: 45px">Keterangan</label>
-            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;"><p>Keluhan:                          </p>
-<p>Rekomendasi:                </p>
-<p>Obat:                                </p></textarea><br>
+            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;">Keluhan:                          
+Rekomendasi:                
+Obat:                                </textarea><br>
             <!-- <label>Status</label> -->
             <!-- <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
                <option>Hadir</option>
@@ -87,7 +88,7 @@
                 <input type="file" name="gambar"> <br>
            
             <div class="text-center" id="kelola">
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" class="btn btn-sm">Submit</div></button></a>
+                <button class="btn btn-md" type="submit" name="login" style="width: 25%; background: #ff6666;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_perkembangan.php" style="background: #ff6666">Submit</a> -->
             </div> 
         </div> 
