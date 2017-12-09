@@ -79,8 +79,8 @@
             <!-- <p><?php echo $user['password']; ?></p><br><br><br> -->
              <div class="form-group last">
                 <div class="text-center">
-                    <button class="btn btn-md" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
-                    <a class="btn btn-default btn-md" onclick="return konfirmasi_hapus()" href="process/pasien/delete_pasien.php?id=<?php echo $id;?>" style="color: #ff6666">Delete</a>
+                    <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
+                    <a class="btn btn-default btn-sm" onclick="return konfirmasi_hapus()" href="process/pasien/delete_pasien.php?id=<?php echo $id;?>" style="color: #ff6666; width: 22%;">Delete</a>
                 </div>
             </div>
             <br><br><br>
@@ -95,7 +95,7 @@
     </div>      
 
     <div class="col-md-12">
-    <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373;">
+    <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373;margin: 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>      
     </div>

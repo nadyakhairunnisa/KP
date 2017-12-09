@@ -103,7 +103,7 @@
     </div>
 
             <div class="form-group last">
-                <div class="col-md-6 text-center" id="kelola">
+                <div class="col-md-6 text-center">
                     <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a>
                     <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666">Delete</a>
                 </div>
@@ -111,7 +111,7 @@
 
     </div>
 
-     <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373">
+     <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>
         

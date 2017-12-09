@@ -102,10 +102,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut a.</p> -->
-    </div>
+
+
     </div>
 
-     <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373">
+    </div>
+         <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
+            <a href="dokter_daftar_perkembangan.php" class="btn btn-default btn-sm" style="color: #ff6666">
+            <span class="glyphicon glyphicon-backward"></span> Kembali
+            </a>
+        </div>
+     <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 20px 0 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>
 

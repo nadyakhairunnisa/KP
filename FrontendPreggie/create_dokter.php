@@ -18,10 +18,7 @@
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--   Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/js.js"></script>
+    
 </head>
 
     <body style="background:#fafafa;">
@@ -55,10 +52,14 @@
             <input type="text" name="alamat" placeholder="Alamat" required><br>
             <label>Tanggal</label>
             <input type="date" name="tanggal" placeholder="Tanggal" required><br>
-            <div class="text-center" id="kelola">
-                <button type="submit" name="login" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>
+            <div class="text-center" style="margin-top: 20px">
+                <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_tambah()" >Submit</div></button>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_dokter.html" style="background: #ff6666">Submit</a> -->
-            </div>  
+            </div>
+             <br><br><br>
+            <a href="read_daftar_dokter.php" class="btn btn-default btn-sm" style="color: #ff6666">
+            <span class="glyphicon glyphicon-backward"></span> Kembali
+            </a>  
         </div> 
               
     </div>    
@@ -66,7 +67,18 @@
         <img src="images/mother.png">
     </div>      
 
-           
+    
+    <div class="col-md-12">
+     <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373;margin: 0px">
+        Copyright &copy Teknik Informatika UII 2017. All right reserved
+    </footer>
+  </div>
+
+  <!--   Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>           
 
     </body>
   </html>
+

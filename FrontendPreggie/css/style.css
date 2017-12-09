@@ -34,6 +34,7 @@
   .nav.navbar-nav li.active a:hover,.nav.navbar-nav li a:hover{
     color:#ff99b9;
     background:none;
+    text-decoration: none;
   }
 
 
@@ -67,10 +68,11 @@
     background-image: none;
   }
   #first-slider .carousel .item {
-    min-height:663px;
+    min-height: 662px;
     height: 100%;
     width:100%;
   }
+
   .carousel-inner .item .container {
       display: flex;
       justify-content: center;
@@ -364,13 +366,13 @@
   .col-md-12 .text-center button{
     width: 100%;
     height: 35%;
-    font-size: 54px;
     color: #4d4d4d;
+    font-weight: 600;
   }
 
   /*Profil pasien*/
   .col-md-12.profil_pasien{
-    height:500px;
+    height:300px;
     background-image: url(../images/bg5.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -380,7 +382,7 @@
     background-size: cover;
   }
   .col-md-12.profil_pasien h1{
-    margin-top:15%;
+    margin-top:9%;
     text-align:center;
     font-size:100px;
     color:#fff;
@@ -435,7 +437,7 @@
   }
   .col-md-5.edit{
     right:0;
-    top:53%;
+    top:33%;
     position:absolute;
   }
   .col-md-5.edit img{
@@ -450,7 +452,12 @@
     margin-top:10px;
     margin-bottom:5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+
   }  
+
+  #perkembangan-pasien a:visited, a:link{
+    color: #4d4d4d;
+  }
   .col-md-6.up{
     text-align:center;
   }
@@ -483,6 +490,10 @@
     font-weight: 600;
   }
 
+   .col-md-12.text-center thead, tbody{
+    text-align: center;
+   }
+
 /*  DOKTER*/
 /*home dokter*/
   .lihat a{
@@ -513,6 +524,7 @@
  }
 
 /*ADMIN*/
+
 #admin a{
   width:70%;
   height: 200px;
@@ -544,11 +556,8 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
   }
 
-  .glyphicon.glyphicon-plus a{
-    background: red;
-  }
-
-    .dpasien a{
+    .dpasien a:link, a:visited{
+    color: #4d4d4d;
     width: 40%;
     background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
     background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
@@ -560,4 +569,9 @@
   .dpasien.dokter a{
     width: 80%
   }
+ 
+.col-md-12 .navbar .text-center footer{
+  width: 100%;
+}
 
+  

@@ -53,7 +53,7 @@
         <div class="input-group">
             <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian" name="q">
             <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                <button class="btn btn-default" style="height: 34px" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
         </div>
         </form>
@@ -143,7 +143,7 @@
         </div>           
      </div>
 
-    <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373">
+    <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 80px 0px 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>
 

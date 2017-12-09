@@ -50,7 +50,7 @@
                     <div class="form-group last">
                         <div class="col-md-12 text-center" >
                             <!-- <a class="btn btn-sm" href="pasien_home.html" style="background: #ff6666">Sign in</a> -->
-                            <button class="btn btn-md" type="submit" name="login" style="width: 24%; background: #ff6666;">Sign In</button></a>
+                            <button class="btn btn-md" type="submit" name="login" style="background: #ff6666;">Sign In</button>
                             <a class="btn btn-default btn-md" href="login.php">Reset</a>
                         </div>
                     </div>
