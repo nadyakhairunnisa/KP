@@ -257,18 +257,18 @@ $today = date('Y-m-d');
                 // $(function(){
                 //   $(event.url).click(function(){
                     // url = $(this).attr("href");
-                    $("#konten-ajax").load(event.url);
-                    return false;
+                    // $("#konten-ajax").load(event.url);
+                    // return false;
                 //   });
-                  $(document).ajaxStart(function(){
-                    $("#konten-ajax").css({'display':'none'});
-                  });
-                  $(document).ajaxComplete(function(){
-                    $("#konten-ajax").slideDown('slow');
-                  });
+                  // $(document).ajaxStart(function(){
+                  //   $("#konten-ajax").css({'display':'none'});
+                  // });
+                  // $(document).ajaxComplete(function(){
+                  //   $("#konten-ajax").slideDown('slow');
+                  // });
                 // });
-                // window.open(event.url);
-                // return false;
+                window.open(event.url);
+                return false;
             }
           }
         });
