@@ -1,7 +1,4 @@
 <?php
-// $bulan = date('n');
-// $bulan = 6;
-// echo date("j", mktime(0, 0, 0, $bulan+1, 0, date('Y')));die;
 include("process/check_login.php");
 include("connect/connect.php");
 $id=$_GET['id'];
@@ -9,13 +6,8 @@ $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
 $pasien = mysqli_fetch_array($sql);
 $sql2 = mysqli_query($conn, "SELECT * FROM perkembangan WHERE pasien_id =$id ");
 $row = mysqli_num_rows($sql2);
-$p = mysqli_fetch_array($sql2);
-while ($p){
-  $i=0;
-  $jadwal_check[$i] = $p['jadwal_check'];
-    // echo $jadwal_check[$i]."<br>";
-  $i++;
-}
+// $p = mysqli_fetch_array($sql2);
+$today = date('Y-m-d');
 ?>
 
 <!DOCTYPE html>
@@ -158,7 +150,7 @@ while ($p){
         Pemberitahuan
       </div>
       <div class="collapse" id="data_1">
-        <div class="card">
+        <!-- <div class="card">
           <p><i class="fa fa-clock-o" aria-hidden="true"></i>Trimester Pertama : 3 Minggu</p>
           <p><i class="fa fa-calendar" aria-hidden="true"></i>9 November 2017</p>      
           <br>
@@ -167,10 +159,12 @@ while ($p){
         </div>
         <div class="card-footer">        
           <a class="btn btn-sm" href="pasien_perkembangan.html" style="width:45%">Lihat Perkembangan</a>
-        </div>    
+        </div>  --> 
+        <div id="konten-ajax">
+        </div>
       </div>
       <div class="collapse" id="data_2">
-        <div class="card">
+        <!-- <div class="card">
           <p><i class="fa fa-clock-o" aria-hidden="true"></i>Trimester Pertama : 4 Minggu</p>
           <p><i class="fa fa-calendar" aria-hidden="true"></i>14 November 2017</p>      
           <br>
@@ -179,10 +173,10 @@ while ($p){
         </div>
         <div class="card-footer">        
           <a class="btn btn-sm" href="pasien_perkembangan.html" style="width:45%">Lihat Perkembangan</a>
-        </div>    
+        </div>  -->   
       </div>
       <div class="collapse" id="data_3">
-        <div class="card">
+        <!-- <div class="card">
           <p><i class="fa fa-clock-o" aria-hidden="true"></i>Trimester Pertama : 5 Minggu</p>
           <p><i class="fa fa-calendar" aria-hidden="true"></i>18 November 2017</p>      
           <br>
@@ -191,7 +185,7 @@ while ($p){
         </div>
         <div class="card-footer">        
           <a class="btn btn-sm" href="pasien_perkembangan.html" style="width:45%">Lihat Perkembangan</a>
-        </div>    
+        </div>  -->   
       </div>
     </div>
 
@@ -205,6 +199,8 @@ while ($p){
         <div class="col-md-1 ket_2"></div>
         <div class="col-md-3">Check Up Selanjutnya</div><br>      
       </div>
+      <div id="konten-ajax">
+        </div>
     </div>
 
   </div><!-- Calendar end -->
@@ -214,33 +210,70 @@ while ($p){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
-
-
   <script>
     $(document).ready(function() {
       $('#calendar').fullCalendar({
-      //     header: {
-      //   left: 'prev,next today',
-      //   center: 'title',
-      //   right: 'month,basicWeek,basicDay'
-      // },
+          header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
             // defaultDate: '2014-09-12',
             // navLinks: true,
             // editable: true,
             // eventLimit: true, // allow "more" link when too many events
 
-            defaultDate: '2017-11-12',
+            defaultDate: '<?php echo $today; ?>',
           navLinks: true, // can click day/week names to navigate views
-          editable: true,
+          editable: false,
           eventLimit: true, // allow "more" link when too many events
           events: [
-          {
-            title: 'All Day Event',
-            start: '2017-11-01'
-          }]
+          <?php
+          $no = 1;
+          while($p = mysqli_fetch_array($sql2)){
+            $p_id = $p['id'];
+            $usia = $p['usia_knd'];
+            $tanggal = $p['jadwal_check'];
+            echo "{";
+            // echo "id: 'data-".$no."',";
+            echo "title: 'Minggu ke-$usia',";
+            echo "start: '$tanggal',";
+            echo "url: 'pasien_konten_home.php?id=$id&p_id=$p_id',";
+            echo "overlap: false";
+            echo "},";
+            $no++;
+          }
+          ?>
+          // {
+          //   title: 'All Day Event',
+          //   start: '2017-11-01'
+          // }
+          ],
+          eventClick: function(event) {
+            if (event.url) {
+                // $(document).ready(function(){
+                //   $("#konten-ajax").load();
+                // });
+                // $(function(){
+                //   $(event.url).click(function(){
+                    // url = $(this).attr("href");
+                    $("#konten-ajax").load(event.url);
+                    return false;
+                //   });
+                  $(document).ajaxStart(function(){
+                    $("#konten-ajax").css({'display':'none'});
+                  });
+                  $(document).ajaxComplete(function(){
+                    $("#konten-ajax").slideDown('slow');
+                  });
+                // });
+                // window.open(event.url);
+                // return false;
+            }
+          }
         });
     });
-  </script>  
+  </script>
 
 </body>
 </html>

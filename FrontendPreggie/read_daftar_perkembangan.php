@@ -4,6 +4,7 @@
   $id=$_GET['id'];
   $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
   $pasien = mysqli_fetch_array($sql);
+  $result = mysqli_query($conn, "SELECT p.id, p.jadwal_check, b.nama, p.usia_knd FROM perkembangan p JOIN bidan b ON p.bidan_id = b.id WHERE p.pasien_id = '$id' ORDER BY p.jadwal_check ASC");
 ?>
 
 <!DOCTYPE html>
@@ -49,20 +50,37 @@
     <div class="container-fluid">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><span  style="font-weight: 600; font-size: 20px"><?php echo $pasien['nama']; ?></span>
-        <br><br><?php $sql = mysqli_query($conn, "SELECT * FROM perkembangan WHERE pasien_id=$pasien[id]");
-            $data = mysqli_num_rows($sql);
+        <br><br><?php $sql2 = mysqli_query($conn, "SELECT * FROM perkembangan WHERE pasien_id=$id");
+            $data = mysqli_num_rows($sql2);
             echo "Jumlah Check-Up: ".$data." Kali"; ?></h5>
 
         <!-- Kolom search start -->
-        <form class="navbar-form navbar-right" role="search" style="padding-right: 50px; padding-top: 10px">
-       <div class="input-group-vertical space" style="margin-bottom: 10px; ">
-            <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian">
-            <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search" ></i></button>
-        </div>
-        <div class="input-group-vertical text-right"  >
-            <a class="btn btn-default" href="create_perkembangan.php?id=<?php echo $pasien['id'];?>" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
+        <form class="navbar-form navbar-right" role="search" >
+            <div class="input-group-vertical space" style="margin-bottom: 10px; ">
+                <form action="read_daftar_perkembangan.php?id=<?php echo $id; ?>" method="get">
+                    <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian" name="cari">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
+                </form>
+            </div>
+            <div class="input-group-vertical text-right"  >
+                <a class="btn btn-default" href="create_perkembangan.php?id=<?php echo $id; ?>" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
         </form>
-     <!-- Kolom search end -->
+        <!-- Kolom search end -->
+
+        <?php 
+        if(isset($_GET['cari']) && isset($_GET['id'])){
+            $cari = $_GET['cari'];
+            echo "<b>Hasil pencarian : ".$cari."</b><br>";
+            // $likeVar = "%" . $cari . "%";
+            $result = mysqli_query($conn, "SELECT p.id, p.jadwal_check, b.nama, p.usia_knd FROM perkembangan p JOIN bidan b ON p.bidan_id = b.id WHERE p.pasien_id = $id AND p.usia_knd LIKE '%$cari%' ORDER BY p.jadwal_check ASC");
+            if ($result === NULL) {
+                // printf("Error: %s\n", mysqli_error($conn));
+                echo "Kata tidak ditemukan.";
+                $result = mysqli_query($conn, "SELECT p.id, p.jadwal_check, b.nama, p.usia_knd FROM perkembangan p JOIN bidan b ON p.bidan_id = b.id WHERE p.pasien_id = $id ORDER BY p.jadwal_check ASC");
+                // die();
+            }
+        }
+        ?>
 
         <table class="table table-hover">
             <thead>
@@ -77,7 +95,7 @@
             <tbody>
                 <!-- <tr> -->
                     <?php
-                        $result = mysqli_query($conn, "SELECT p.id, p.jadwal_check, b.nama, p.usia_knd FROM perkembangan p JOIN bidan b ON p.bidan_id = b.id WHERE p.pasien_id = $pasien[id] ORDER BY p.jadwal_check DESC");
+                        
                         while ($row = mysqli_fetch_assoc($result)) {
                             $id = $row['id'];
                             $tanggal = $row['jadwal_check'];

@@ -53,7 +53,7 @@
 		// echo "<script>alert('Data gagal disimpan. Note: Error updating Time.');
 		// 	window.location.href='../../create_perkembangan.php?id=$pasien_id' </script>";
 
-		$query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, status ) values ('$pasien_id', '$bidan', '$jadwal_check', 'Belum Hadir')");
+		$query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, usia_knd, status ) values ('$pasien_id', '$bidan', '$jadwal_check', $usia_knd, 'Belum Hadir')");
 
 	    if($query){
 	    	mysqli_commit($conn);

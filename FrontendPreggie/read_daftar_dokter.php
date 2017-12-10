@@ -1,6 +1,7 @@
 <?php
   include("process/check_login.php");
   include("connect/connect.php");
+  $result = mysqli_query($conn, "SELECT id, nama FROM bidan");
 ?>
 
 <!DOCTYPE html>
@@ -46,14 +47,31 @@
     
     <!-- Kolom search start -->
         <form class="navbar-form navbar-right" role="search" >
-        <div class="input-group-vertical space" style="margin-bottom: 10px; ">
-            <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian">
-            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
-        </div>
-        <div class="input-group-vertical text-right" >
-           	<a class="btn btn-default" href="create_dokter.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Dokter</a></div>
+            <div class="input-group-vertical space" style="margin-bottom: 10px; ">
+                <form action="read_daftar_dokter.php" method="get">
+                    <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian" name="cari">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
+                </form>
+            </div>
+            <div class="input-group-vertical text-right"  >
+                <a class="btn btn-default" href="create_dokter.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Dokter</a></div>
         </form>
-     <!-- Kolom search end -->
+        <!-- Kolom search end -->
+
+        <?php 
+        if(isset($_GET['cari'])){
+            $cari = $_GET['cari'];
+            echo "<b>Hasil pencarian : ".$cari."</b><br>";
+            // $likeVar = "%" . $cari . "%";
+            $result = mysqli_query($conn, "SELECT id, nama FROM bidan WHERE nama LIKE '%$cari%'");
+            if ($result === NULL) {
+                // printf("Error: %s\n", mysqli_error($conn));
+                echo "Kata tidak ditemukan.";
+                $result = mysqli_query($conn, "SELECT id, nama FROM bidan");
+                // die();
+            }
+        }
+        ?>
 
         <table class="table table-hover">
             <thead>
@@ -63,79 +81,20 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr> -->
-                    <?php
-                        $result = mysqli_query($conn, "SELECT id, nama FROM bidan");
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $nama = $row['nama'];
-                            
-                            echo "<tr>";
-                            echo "<td>$nama</td>";
-                            echo "<td>
-                            <div class='dpasien dokter'>
-                            <a class='btn btn-sm' href='read_profil_dokter.php?id=$id'>Lihat Profil</a>
-                            </div></td>";
-                            echo "</tr>";
-                        }
-                    ?>
-                <!-- </tr> -->
-                <!-- <tr>
-                    <td>dr.Agus Sp. OG</td>
-                    <td>
-                    	<div class="dpasien dokter">
-                    	<a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                    	</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Nurul Fatikah M Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Nadya Khairunnisa Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Jecky Fernando Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Maria Ulfa Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Fadhillah Abriyani Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_doktern.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dr.Agus Sp. OG</td>
-                    <td>
-                        <div class="dpasien dokter">
-                        <a class="btn btn-sm" href="read_profil_dokter.html">Lihat Profil</a>
-                        </div>
-                    </td>
-                </tr> -->
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                    $id = $row['id'];
+                    $nama = $row['nama'];
+
+                    echo "<tr>";
+                    echo "<td>$nama</td>";
+                    echo "<td>
+                    <div class='dpasien dokter'>
+                        <a class='btn btn-sm' href='read_profil_dokter.php?id=$id'>Lihat Profil</a>
+                    </div></td>";
+                    echo "</tr>";
+                }
+                ?>
             </tbody>
         </table>
       </div>

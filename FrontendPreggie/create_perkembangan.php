@@ -46,7 +46,7 @@
 
     <div class="col-md-7 edit">        
         <div class="col-md-12 input">
-        <form class="form-horizontal" role="form" method="post" action="process/perkembangan/add_perkembangan.php" align=""> 
+        <form class="form-horizontal" role="form" method="post" action="process/perkembangan/add_perkembangan.php" align="" enctype="multipart/form-data"> 
             <input type="hidden" value="<?php echo $id ?>" name="id"><br>
             <label>Nama Dokter</label>
             <select class="form-control col-md-offset-2" name="bidan" style="width: 85%; height: 40px;margin-top: 25px;">
@@ -73,16 +73,14 @@
             <label>Berat Badan</label>
             <input type="text" name="berat_badan" placeholder="kg"><br>
             <label style="margin-top: 45px">Keterangan</label>
-            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;">Keluhan:                          
-Rekomendasi:                
-Obat:                                </textarea><br>
+            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;"><p>Keluhan: </p><p>Rekomendasi: </p><p>Obat: </p></textarea><br>
             <!-- <label>Status</label> -->
             <!-- <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
                <option>Hadir</option>
                <option>Belum Hadir</option>
             </select> -->
             <label>Gambar</label> 
-                <input type="file" name="gambar"> <br>
+                <input type="file" name="gambar" /> <br>
            
             <div class="text-center">
                 <button class="btn btn-sm" type="submit" name="login" style="width: 25%; background: #ff6666;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>

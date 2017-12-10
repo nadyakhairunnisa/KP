@@ -2,9 +2,10 @@
   include("process/check_login.php");
   include("connect/connect.php");
   $id=$_GET['id'];
+  $p_id=$_GET['p_id'];
   $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$id LIMIT 1");
   $pasien = mysqli_fetch_array($sql);
-  $sql2 = mysqli_query($conn, "SELECT * FROM perkembangan WHERE pasien_id =$id LIMIT 1");
+  $sql2 = mysqli_query($conn, "SELECT * FROM perkembangan WHERE id =$p_id LIMIT 1");
   $p = mysqli_fetch_array($sql2);
 ?>
 
@@ -52,8 +53,8 @@
     <div class="container-fluid">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><span  style="font-weight: 600; font-size: 20px"><?php echo $p['jadwal_check']; ?></span>
-        <br><br><?php echo $p['nama']; ?>
-        <br><br><?php echo $p['usia_knd']; ?></h5>
+        <br><br><?php echo $pasien['nama']; ?>
+        <br><br><?php echo "Minggu ke-".$p['usia_knd']; ?></h5>
         
         <table class="table table-hover">
             <thead>
