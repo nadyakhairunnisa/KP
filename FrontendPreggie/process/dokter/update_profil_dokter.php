@@ -5,6 +5,7 @@
 	$nama = $_POST['nama'];
 	$no_hp = $_POST['no_hp'];
 	$alamat = $_POST['alamat'];
+	$today = date('d-m-Y');
 
 	$no_hp = preg_replace("/[^(0-9)]/", "", $no_hp);
 	

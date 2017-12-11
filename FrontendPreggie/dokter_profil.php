@@ -4,6 +4,8 @@
     $id=$_GET['id'];
     $sql = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$id LIMIT 1");
     $bidan = mysqli_fetch_array($sql);
+    $sql2 = mysqli_query($conn, "SELECT * FROM user WHERE id =$bidan[user_id] LIMIT 1");
+    $user = mysqli_fetch_array($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -48,9 +50,9 @@
     <div class="col-md-7 edit dokter">        
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/dokter/update_profil_dokter.php" align=""> 
-            <input type="hidden" value="<?php echo $id ?>" name="id">
+            <input type="hidden" value="<?php echo $id; ?>" name="id">
             <label>Nama</label>
-            <input type="text" name="nama" value="<?php echo $bidan['nama']; ?>"><br>
+            <input type="text" name="nama" value="<?php echo $bidan['nama']; ?>" readonly><br>
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?php echo $bidan['no_hp']; ?>"><br>
             <label>Alamat</label>
@@ -65,7 +67,7 @@
             </div>    
         </div> 
         <br><br><br>
-        <a href="dokter_home.php" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
+        <a href="dokter_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
         <span class="glyphicon glyphicon-backward"></span> Kembali
         </a>      
     </div>    

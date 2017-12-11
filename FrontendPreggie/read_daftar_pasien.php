@@ -99,6 +99,9 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
                 ?>
             </tbody>
         </table>
+        <a href="admin_home.php" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
+        <span class="glyphicon glyphicon-backward"></span> Kembali
+        </a>
     </div>
 </div>
 <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373; margin: 60px 0px 0px">

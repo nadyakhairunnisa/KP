@@ -8,6 +8,7 @@
 	$gol_darah = $_POST['gol_darah'];
 	$usia = $_POST['usia'];
 	$nama_wali = $_POST['nama_wali'];
+	$today = date('d-m-Y');
 	
 	$no_hp = preg_replace("/[^(0-9)]/", "", $no_hp);
 	$gol_darah = preg_replace("/[^(A,B,AB,O)]/", "", $gol_darah);

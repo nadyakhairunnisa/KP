@@ -35,7 +35,7 @@
 	mysqli_begin_transaction($conn);
 
 	if($tgl_masuk <= $tgl_today){
-	    $query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, usia_knd, berat_knd, tensi, detak_jantung, tinggi_badan, berat_badan, keterangan, gambar, status ) values ('$pasien_id', '$bidan', '$jadwal_check', '$usia_knd', '$berat_knd', '$tensi', '$detak_jantung', '$tinggi_badan', '$berat_badan', '$keterangan', '$savepic', 'Hadir')");
+	    $query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, usia_knd, berat_knd, tensi, detak_jantung, tinggi_badan, berat_badan, keterangan, gambar, status) values ('$pasien_id', '$bidan', '$jadwal_check', '$usia_knd', '$berat_knd', '$tensi', '$detak_jantung', '$tinggi_badan', '$berat_badan', '$keterangan', '$savepic', 'Hadir')");
 	    $move = move_uploaded_file($tmp_file, $path);
 
 	    if($query && $move){
@@ -53,7 +53,7 @@
 		// echo "<script>alert('Data gagal disimpan. Note: Error updating Time.');
 		// 	window.location.href='../../create_perkembangan.php?id=$pasien_id' </script>";
 
-		$query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, usia_knd, status ) values ('$pasien_id', '$bidan', '$jadwal_check', $usia_knd, 'Belum Hadir')");
+		$query = mysqli_query($conn, "INSERT INTO perkembangan (pasien_id, bidan_id, jadwal_check, usia_knd, status) values ('$pasien_id', '$bidan', '$jadwal_check', $usia_knd, 'Belum Hadir')");
 
 	    if($query){
 	    	mysqli_commit($conn);

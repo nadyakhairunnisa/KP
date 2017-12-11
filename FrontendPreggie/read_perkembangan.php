@@ -6,6 +6,8 @@
   $p = mysqli_fetch_array($sql);
   $sql2 = mysqli_query($conn, "SELECT * FROM pasien WHERE id =$p[pasien_id] LIMIT 1");
   $pasien = mysqli_fetch_array($sql2);
+  $sql3 = mysqli_query($conn, "SELECT * FROM bidan WHERE id =$p[bidan_id] LIMIT 1");
+  $bidan = mysqli_fetch_array($sql3);
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +51,28 @@
     </div>
 
     <div class="container-fluid">
+    <form class="form-horizontal" role="form" method="post" action="process/perkembangan/update_perkembangan.php" align="">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
-      <h5><span  style="font-weight: 600; font-size: 20px"><?php echo $p['jadwal_check']; ?></span>
-        <br><br><?php echo $pasien['nama']; ?>
-        <br><br><?php echo $p['usia_knd']." Minggu"; ?></h5>
+      <h5><?php echo $pasien['nama']; ?>
+        <br><br><span style="font-weight: 600; font-size: 15px"><input type="date" name="jadwal_check" style="color: black;" value="<?php echo $p['jadwal_check']; ?>"></span>
+        <!-- <br><br><input type='text' name='usia_knd' style="color: black; text-align: center;" value='<?php echo $p['usia_knd']; ?> Minggu'> -->
+        <br><br><select name="bidan" style="color: black; text-align: center;">
+                <?php 
+                    $query = mysqli_query($conn, "SELECT * FROM bidan");
+                    while($data = mysqli_fetch_assoc($query)) {
+                      $bid = $data['id'];
+                      $nama = $data['nama'];
+                      if($bid == $p['bidan_id']){
+                        echo "<option value='$bid' selected>$nama</option>";
+                      } else {
+                        echo "<option value='$bid'>$nama</option>";
+                      }}
+                ?>
+            </select></h5>
         
+        <input type="hidden" value="<?php echo $id ?>" name="id">
+        <!-- <input type="hidden" value="<?php echo $p['bidan_id'] ?>" name="bidan_id"> -->
+
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -69,12 +88,12 @@
                 <?php
 
                 echo "<tr>";
-                echo "<td>$p[usia_knd]</td>";
-                echo "<td>$p[berat_knd]</td>";
-                echo "<td>$p[tensi]</td>";
-                echo "<td>$p[detak_jantung]</td>";
-                echo "<td>$p[tinggi_badan]</td>";
-                echo "<td>$p[berat_badan]</td>";
+                echo "<td><input type='text' name='usia_knd' value='$p[usia_knd]'></td>";
+                echo "<td><input type='text' name='berat_knd' value='$p[berat_knd]'></td>";
+                echo "<td><input type='text' name='tensi' value='$p[tensi]'></td>";
+                echo "<td><input type='text' name='detak_jantung' value='$p[detak_jantung]'></td>";
+                echo "<td><input type='text' name='tinggi_badan' value='$p[tinggi_badan]'></td>";
+                echo "<td><input type='text' name='berat_badan' value='$p[berat_badan]'></td>";
                 echo "</tr>";
 
                 ?>
@@ -87,25 +106,20 @@
       </div>
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">
-        <?php echo $p['keterangan']; ?>
-        <!-- <p><b>Keluhan:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco </p> <br>
-        <p><b>Rekomendasi:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi </p> <br>
-        <p><b>Obat:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut a.</p> -->
+        <textarea type="text" name="keterangan" style="width: 85%; height: 90px;"><?php echo $p['keterangan']; ?></textarea><br>
+        
     </div>
 
             <div class="form-group last">
                 <div class="col-md-6 text-center">
-                    <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a>
+                    <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
+                    <!-- <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a> -->
                     <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666">Delete</a>
+                </div>
+                <div class=" text-left" style="margin-bottom: 10px; width: 60em">        
+                  <a href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id']; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
+                    <span class="glyphicon glyphicon-backward"></span> Kembali
+                  </a>
                 </div>
             </div>
 

@@ -49,19 +49,19 @@
         <form class="form-horizontal" role="form" method="post" action="process/perkembangan/add_perkembangan.php" align="" enctype="multipart/form-data"> 
             <input type="hidden" value="<?php echo $id ?>" name="id"><br>
             <label>Nama Dokter</label>
-            <select class="form-control col-md-offset-2" name="bidan" style="width: 85%; height: 40px;margin-top: 25px;">
+            <select class="form-control col-md-offset-2" name="bidan" style="width: 85%; height: 40px;margin-top: 25px;" required>
                 <?php 
                     $query = mysqli_query($conn, "SELECT * FROM bidan");
                     while($data = mysqli_fetch_assoc($query)) {
-                      $id = $data['id'];
+                      $bid = $data['id'];
                       $nama = $data['nama'];
-                      echo "<option value='$id'>$nama</option>"; }
+                      echo "<option value='$bid'>$nama</option>"; }
                 ?>
             </select>
             <label>Jadwal Check Up</label>
             <input type="date" name="jadwal_check" required><br>
             <label>Usia Kandungan</label>
-            <input type="text" name="usia_knd" placeholder="Minggu"><br>
+            <input type="text" name="usia_knd" placeholder="Minggu" required><br>
             <label>Berat Kandungan</label>
             <input type="text" name="berat_knd" placeholder="gram"><br>
             <label>Tensi</label>
@@ -73,7 +73,9 @@
             <label>Berat Badan</label>
             <input type="text" name="berat_badan" placeholder="kg"><br>
             <label style="margin-top: 45px">Keterangan</label>
-            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;"><p>Keluhan: </p><p>Rekomendasi: </p><p>Obat: </p></textarea><br>
+            <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;">Keluhan: 
+Rekomendasi: 
+Obat: </textarea><br>
             <!-- <label>Status</label> -->
             <!-- <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
                <option>Hadir</option>
@@ -87,7 +89,7 @@
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_perkembangan.php" style="background: #ff6666">Submit</a> -->
             </div> 
             <br><br><br>
-            <a href="read_daftar_perkembangan.php" class="btn btn-default btn-sm" style="color: #ff6666">
+            <a href="read_daftar_perkembangan.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
             <span class="glyphicon glyphicon-backward"></span> Kembali
             </a>
         </div>         

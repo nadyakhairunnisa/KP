@@ -4,6 +4,8 @@
   $id=$_GET['id'];
   $sql = mysqli_query($conn, "SELECT * FROM pasien WHERE id ='$id' LIMIT 1");
   $pasien = mysqli_fetch_assoc($sql);
+  $sql2 = mysqli_query($conn, "SELECT * FROM user WHERE id =$pasien[user_id] LIMIT 1");
+  $user = mysqli_fetch_array($sql2);
 ?>
 
 <!DOCTYPE html>
@@ -51,9 +53,9 @@
     <div class="col-md-7 edit">        
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/pasien/update_profil_pasien.php" align=""> 
-            <input type="hidden" value="<?php echo $id ?>" name="id">
+            <input type="hidden" value="<?php echo $id; ?>" name="id">
             <label>Nama</label>
-            <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>"><br>
+            <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>" readonly><br>
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?php echo $pasien['no_hp']; ?>"><br>
             <label style="margin-top: 10px;">Golongan Darah</label>
@@ -69,11 +71,19 @@
             <input type="text" name="alamat" value="<?php echo $pasien['alamat']; ?>"><br>
             <label>Nama Wali</label>
             <input type="text" name="nama_wali" value="<?php echo $pasien['nama_wali']; ?>"><br>
+            <label>Username</label>
+            <input type="text" name="uname" value="<?php echo $user['username']; ?>" readonly>
+            <label>Password</label>
+            <input type="text" name="password" value="<?php echo $user['password']; ?>">
             <div class="text-center" id="kelola">
                 <button type="submit" name="update" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Submit</div></button></a>
                 <!-- <a onclick="return konfirmasi_tambah()" class="btn btn-sm" href="process/pasien/update_profil_pasien.php" style="background: #ff6666">Submit</a> -->
             </div>  
-        </div> 
+        </div>
+        <br><br><br>
+        <a href="pasien_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
+        <span class="glyphicon glyphicon-backward"></span> Kembali
+        </a>
               
     </div>    
     <div class="col-md-5 edit">

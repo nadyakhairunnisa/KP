@@ -55,15 +55,6 @@
             $data = mysqli_num_rows($sql);
             echo "Jumlah Check-Up: ".$data." Kali"; ?></h5>
 
-        <!-- Kolom search start -->
-        <form class="navbar-form navbar-right" role="search" style="padding-right: 50px; padding-top: 10px">
-       <div class="input-group-vertical space" style="margin-bottom: 10px; ">
-            <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian">
-            <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search" ></i></button>
-        </div>
-    </form> 
-     <!-- Kolom search end -->
-
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -92,32 +83,13 @@
                         echo "</tr>";
                     }
                 ?>
-                <!-- <tr>
-                    <td>9 November 2017</td>
-                    <td>dr.Nurul Fatikah M Sp.OG</td>
-                    <td>3 Minggu</td>
-                    <td><div class="lihat"><a class="btn btn-sm" href="dokter_perkembangan.html">Detail Perkembangan</a></div></td>
-                </tr>
-                <tr>
-                    <td>30 November 2017</td>
-                    <td>dr.Nurul Fatikah M Sp.OG</td>
-                    <td>6 Minggu</td>
-                    <td><div class="lihat"><a class="btn btn-sm" href="dokter_perkembangan.html">Detail Perkembangan</a></div></td>
-                </tr>
-                <tr>
-                    <td>21 Desember 2017</td>
-                    <td>dr.Nurul Fatikah M Sp.OG</td>
-                    <td>9 Minggu</td>
-                    <td><div class="lihat"><a class="btn btn-sm" href="dokter_perkembangan.html">Detail Perkembangan</a></div></td>
-                </tr>
-                <tr>
-                    <td>14 Januari 2018</td>
-                    <td>dr.Nurul Fatikah M Sp.OG</td>
-                    <td>12 Minggu</td>
-                    <td><div class="lihat"><a class="btn btn-sm" href="dokter_perkembangan.html">
-                    Lihat Perkembangan</a></div></td>
-                </tr> -->
-            </tbody>
+
+                <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
+                    <a href="dokter_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
+                    <span class="glyphicon glyphicon-backward"></span> Kembali
+                    </a>
+                </div>
+                </tbody>
         </table>
       </div>
     </div>

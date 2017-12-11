@@ -49,8 +49,8 @@
     <div class="col-md-7 edit">        
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/pasien/update_pasien.php" align=""> 
-            <input type="hidden" value="<?php echo $id ?>" name="id">
-            <input type="hidden" value="<?php echo $pasien['user_id'] ?>" name="user_id">
+            <input type="hidden" value="<?php echo $id; ?>" name="id">
+            <input type="hidden" value="<?php echo $pasien['user_id']; ?>" name="user_id">
             <label>Nama</label>
             <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>"><br>
             <label>No HP</label>

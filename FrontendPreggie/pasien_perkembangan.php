@@ -90,20 +90,16 @@
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">
         <?php echo $p['keterangan']; ?>
-        <!-- <p><b>Keluhan:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco </p> <br>
-        <p><b>Rekomendasi:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi </p> <br>
-        <p><b>Obat:</b></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut a.</p> -->
+
     </div>
+
     </div>
+
+        <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
+            <a href="pasien_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
+            <span class="glyphicon glyphicon-backward"></span> Kembali
+            </a>
+        </div>
 
 
         

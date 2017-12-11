@@ -146,9 +146,9 @@ $today = date('Y-m-d');
     </div>
 
     <div class="col-md-4 col-xs-12 event_detail">
-      <div class="header">
+      <!-- <div class="header">
         Pemberitahuan
-      </div>
+      </div> -->
       <div class="collapse" id="data_1">
         <!-- <div class="card">
           <p><i class="fa fa-clock-o" aria-hidden="true"></i>Trimester Pertama : 3 Minggu</p>
@@ -159,9 +159,7 @@ $today = date('Y-m-d');
         </div>
         <div class="card-footer">        
           <a class="btn btn-sm" href="pasien_perkembangan.html" style="width:45%">Lihat Perkembangan</a>
-        </div>  --> 
-        <div id="konten-ajax">
-        </div>
+        </div>   -->
       </div>
       <div class="collapse" id="data_2">
         <!-- <div class="card">
@@ -199,13 +197,15 @@ $today = date('Y-m-d');
         <div class="col-md-1 ket_2"></div>
         <div class="col-md-3">Check Up Selanjutnya</div><br>      
       </div>
-      <div id="konten-ajax">
-        </div>
     </div>
+        <div id="konten-ajax">
+        </div>
 
   </div><!-- Calendar end -->
 
   
+  <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" src="js/jquery2.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js'></script>
@@ -250,16 +250,29 @@ $today = date('Y-m-d');
           // }
           ],
           eventClick: function(event) {
-            if (event.url) {
-                // $(document).ready(function(){
-                //   $("#konten-ajax").load();
-                // });
+            // $(document).ready(function(){
+            //   $("#konten-ajax").load(<?php $userid = $_GET['id']; echo("href='konten/latest_perkembangan.php?id=$userid'"); ?>);
+            // });
+            // $(function(){
+              // $("#menu a").click(function(){
+                url = $(this).attr("href");
+                $("#konten-ajax").load(event.url);
+                return false;
+              // });
+              $(document).ajaxStart(function(){
+                $("#konten-ajax").css({'display':'none'});
+              });
+              $(document).ajaxComplete(function(){
+                $("#konten-ajax").slideDown('slow');
+              });
+            // });
+            // if (event.url) {
                 // $(function(){
-                //   $(event.url).click(function(){
-                    // url = $(this).attr("href");
-                    // $("#konten-ajax").load(event.url);
-                    // return false;
-                //   });
+                  // $(event.url).click(function(){
+                  //   url = $(event.url).attr("href");
+                  //   $("#konten-ajax").load(url);
+                  //   return false;
+                  // });
                   // $(document).ajaxStart(function(){
                   //   $("#konten-ajax").css({'display':'none'});
                   // });
@@ -267,9 +280,10 @@ $today = date('Y-m-d');
                   //   $("#konten-ajax").slideDown('slow');
                   // });
                 // });
-                window.open(event.url);
-                return false;
-            }
+
+                // window.open(event.url);
+                // return false;
+            // }
           }
         });
     });

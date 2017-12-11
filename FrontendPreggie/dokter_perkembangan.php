@@ -108,7 +108,7 @@
 
     </div>
          <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
-            <a href="dokter_daftar_perkembangan.php" class="btn btn-default btn-sm" style="color: #ff6666">
+            <a href="dokter_daftar_perkembangan.php?id=<?php echo $id; ?>&p_id=<?php echo $p_id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
             <span class="glyphicon glyphicon-backward"></span> Kembali
             </a>
         </div>
