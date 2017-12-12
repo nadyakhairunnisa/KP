@@ -64,7 +64,8 @@
             echo "<b>Hasil pencarian : ".$cari."</b><br>";
             // $likeVar = "%" . $cari . "%";
             $result = mysqli_query($conn, "SELECT id, nama FROM bidan WHERE nama LIKE '%$cari%'");
-            if ($result === NULL) {
+            $row = mysqli_fetch_array($result);
+            if (empty($row)) {
                 // printf("Error: %s\n", mysqli_error($conn));
                 echo "Kata tidak ditemukan.";
                 $result = mysqli_query($conn, "SELECT id, nama FROM bidan");

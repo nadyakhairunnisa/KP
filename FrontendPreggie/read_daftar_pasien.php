@@ -64,7 +64,7 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
             // $likeVar = "%" . $cari . "%";
             $result = mysqli_query($conn, "SELECT id, nama FROM pasien WHERE nama LIKE '%$cari%'");
             $row = mysqli_fetch_array($result);
-            if ($row === NULL) {
+            if (empty($row)) {
                 // printf("Error: %s\n", mysqli_error($conn));
                 echo "Kata tidak ditemukan.";
                 $result = mysqli_query($conn, "SELECT id, nama FROM pasien");

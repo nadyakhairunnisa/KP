@@ -10,7 +10,8 @@
 	$tahun=$array[0];
 	$today = date('d-m-Y');
 	$tgl_masuk = strtotime($date);
-	$tgl_today = strtotime($today); 
+	$tgl_today = strtotime($today);
+	$no_hp = preg_replace("/[^(0-9)]/", "", $no_hp); 
 	
 	mysqli_begin_transaction($conn);
 
@@ -35,12 +36,13 @@
 			$result = mysqli_query($conn, "UPDATE user set username = '$username' WHERE id = '$user_id'");
 
 			if($result){
-				$no_hp = preg_replace("/[^(0-9)]/", "", $no_hp);
+				
 				$query = mysqli_query($conn, "UPDATE bidan set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', tanggal = '$date' WHERE id = '$id'");
 				if($query){
 					mysqli_commit($conn);
 					echo "<script>alert('Data berhasil disimpan!');
 					window.location.href='../../read_profil_dokter.php?id=$id' </script>";
+					mysqli_close($conn);
 				} else {
 					mysqli_rollback($conn);
 					echo "<script>alert('Data gagal disimpan. Note: Error updating Bidan.');
@@ -49,6 +51,18 @@
 			} else {
 				mysqli_rollback($conn);
 				echo "<script>alert('Data gagal disimpan. Note: Error updating User.');
+				window.location.href='../../read_profil_dokter.php?id=$id' </script>";
+			}
+		} else {
+			$query = mysqli_query($conn, "UPDATE bidan set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', tanggal = '$date' WHERE id = '$id'");
+			if($query){
+				mysqli_commit($conn);
+				echo "<script>alert('Data berhasil disimpan!');
+				window.location.href='../../read_profil_dokter.php?id=$id' </script>";
+				mysqli_close($conn);
+			} else {
+				mysqli_rollback($conn);
+				echo "<script>alert('Data gagal disimpan. Note: Error updating Bidan.');
 				window.location.href='../../read_profil_dokter.php?id=$id' </script>";
 			}
 		}

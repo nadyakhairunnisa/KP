@@ -25,6 +25,9 @@
 		} else if($data>=100){
 			$username = 'BD'.($tahun-2000).($data+1);
 		}
+
+		echo "$username";
+		die;
 		
 
 		$sql1 = mysqli_query($conn, "INSERT INTO user (grup_id, username, password) values ('2', '$username', '$password')");
@@ -41,11 +44,12 @@
 			echo "<script>alert('Data berhasil disimpan!');
 					window.location.href='../../read_daftar_dokter.php' </script>";
 		} else {
+			echo mysqli_error ($conn );
+			die;
 			mysqli_rollback($conn);
 			echo "<script>alert('Data gagal disimpan.');
 			window.location.href='../../create_dokter.php' </script>";
-			// echo mysqli_error ($conn );
-			// die;
+			
 		}
 
 	} else {

@@ -54,6 +54,7 @@
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/pasien/update_profil_pasien.php" align=""> 
             <input type="hidden" value="<?php echo $id; ?>" name="id">
+            <input type="hidden" value="<?php echo $pasien['user_id']; ?>" name="user_id">
             <label>Nama</label>
             <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>" readonly><br>
             <label>No HP</label>
