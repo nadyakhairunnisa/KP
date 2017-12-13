@@ -21,12 +21,11 @@ $today = date('Y-m-d');
 
  <!-- Bootstrap -->    
  <link rel="stylesheet" href="css/bootstrap.css">    
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/bootstrap.min.css">
  <!-- StyleSheet -->
  <link rel="stylesheet" type="text/css" href="css/style.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
- <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css'>
+ <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
  <!-- <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.print.css'> -->
  <!--   Script --> 
 </head>
@@ -187,29 +186,29 @@ $today = date('Y-m-d');
       </div>
     </div>
 
+
     <div class="col-md-5">
-      <div class="kotak">
+      <div class="kotak" style="margin-top: 20px;">
         <div class="col-md-1 ket_1"></div>
         <div class="col-md-3">Hari Ini</div>
-
         <div class="col-md-1 ket_3"></div>
         <div class="col-md-3">Check Up</div>
         <div class="col-md-1 ket_2"></div>
         <div class="col-md-3">Check Up Selanjutnya</div><br>      
       </div>
     </div>
+
         <div id="konten-ajax">
         </div>
 
   </div><!-- Calendar end -->
 
-  
   <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
   <script type="text/javascript" src="js/jquery2.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap1.min.js"></script>
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/fullcalendar.min.js"></script>
   <script>
     $(document).ready(function() {
       $('#calendar').fullCalendar({
@@ -223,7 +222,7 @@ $today = date('Y-m-d');
             // editable: true,
             // eventLimit: true, // allow "more" link when too many events
 
-            defaultDate: '<?php echo $today; ?>',
+          defaultDate: '<?php echo $today; ?>',
           navLinks: true, // can click day/week names to navigate views
           editable: false,
           eventLimit: true, // allow "more" link when too many events
@@ -288,6 +287,13 @@ $today = date('Y-m-d');
         });
     });
   </script>
+
+
+<div class="col-md-12">
+  <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 30px 0px 0px">
+    Copyright &copy Teknik Informatika UII 2017. All right reserved
+  </footer>
+</div>
 
 </body>
 </html>

@@ -13,9 +13,7 @@
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--   Script -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 </head>
 
     <body>
@@ -63,8 +61,11 @@
      </div>
     </div>
           
-
+    <!--   Script -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/js.js"></script>
            
-
     </body>
   </html>

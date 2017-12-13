@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>PREGGIE</title>
@@ -19,14 +19,10 @@
 
     <!-- Bootstrap -->    
     <link rel="stylesheet" href="css/bootstrap.css">    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--   Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/js.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
     <body style="background:#fafafa;">
@@ -38,8 +34,8 @@
           <a class="navbar-brand" <?php echo ("href='pasien_home.php?id=$pasien[id]'"); ?>></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a <?php echo ("href='pasien_home.php?id=$pasien[id]'"); ?>>Home</a></li>          
-          <li><a <?php echo ("href='pasien_profil.php?id=$pasien[id]'"); ?>>Profil</a></li>
+          <li><a <?php echo ("href='pasien_home.php?id=$pasien[id]'"); ?>>Home</a></li>          
+          <li class="active"><a <?php echo ("href='pasien_profil.php?id=$pasien[id]'"); ?>>Profil</a></li>
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
       </div>
@@ -75,8 +71,8 @@
             <input type="text" name="uname" value="<?php echo $user['username']; ?>" readonly>
             <label>Password</label>
             <input type="text" name="password" value="<?php echo $user['password']; ?>">
-            <div class="text-center" id="kelola">
-                <button type="submit" name="update" style="border: none; background: #ff6666;"><div onclick="return konfirmasi_ubah()" class="btn btn-sm">Submit</div></button></a>
+            <div style="text-align:center">
+                <button class="btn btn-sm" type="submit" name="update" style="width: 25%; background: #ff6666; margin-top: 20px"><div onclick="return konfirmasi_ubah()">Submit</div></button></a>
                 <!-- <a onclick="return konfirmasi_tambah()" class="btn btn-sm" href="process/pasien/update_profil_pasien.php" style="background: #ff6666">Submit</a> -->
             </div>  
         </div>
@@ -88,9 +84,18 @@
     </div>    
     <div class="col-md-5 edit">
         <img src="images/mother.png">
-    </div>      
+    </div>
 
-           
+     <!--   Script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <div class="col-md-12">
+  <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 0px">
+    Copyright &copy Teknik Informatika UII 2017. All right reserved
+  </footer>
+</div>
 
     </body>
   </html>

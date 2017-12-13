@@ -266,9 +266,10 @@
 
 
   /*Detail */
-  .col-md-4.col-xs-12.event_detail{
-    margin-top: 70px;
+  .col-md-4.col-md-12{
+    margin-top: 10px;
   }
+
   .header{
     background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
     background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
@@ -317,6 +318,7 @@
   .col-md-5{
     margin-top:25px;
   }
+  
   .col-md-5 .kotak{
     height:70px;        
   }
@@ -328,7 +330,9 @@
     letter-spacing#ff99cc
   }
   .kotak .col-md-1{
-    height:30px;width:30px;
+    height:30px;
+    width:30px;
+
   }
   .ket_1{
     background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);

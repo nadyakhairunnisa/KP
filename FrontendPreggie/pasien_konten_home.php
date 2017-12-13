@@ -12,19 +12,16 @@ $bidan = mysqli_fetch_array($sql3);
 $today = date('Y-m-d');
 ?>
 
-<div class="col-md-4 col-xs-12 event_detail">
+<div class="col-md-4 col-xs-12">
   <div class="header">
     Pemberitahuan
   </div>
-  <!-- <div class="collapse" id="data_1"> -->
-    <!-- <div class="card"> -->
+    <div class="card">
       <p><i class="fa fa-clock-o" aria-hidden="true"></i>Usia Kandungan : <?php echo $p['usia_knd']; ?> Minggu</p>
-      <p><i class="fa fa-calendar" aria-hidden="true"></i><?php echo $p['jadwal_check']; ?></p>      
-      <br>
+      <p><i class="fa fa-calendar" aria-hidden="true"></i><?php echo $p['jadwal_check']; ?></p>
       <p><i class="fa fa-user" aria-hidden="true"></i><?php echo $bidan['nama']; ?></p>     
-    <!-- </div> -->
-    <!-- <div class="card-footer">         -->
+    </div>
+    <div class="card-footer">        
       <a class="btn btn-sm" href="pasien_perkembangan.php?id=<?php echo $id; ?>&p_id=<?php echo $p['id']; ?>" style="width:45%">Lihat Perkembangan</a>
-    <!-- </div>     -->
-  <!-- </div> -->
+    </div>    
 </div>
