@@ -56,7 +56,6 @@
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?php echo $pasien['no_hp']; ?>"><br>
             <label>Gol Darah</label>
-            <!-- <input type="text" name="gol_darah" <?php echo("placeholder='$pasien[gol_darah]'"); ?>><br> -->
             <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
                 <option>A</option>
                 <option>B</option>
@@ -73,10 +72,8 @@
             <input type="date" name="tanggal" value="<?php echo $pasien['tanggal']; ?>"><br><br>
             <label>Username</label>
             <input type="text" name="uname" value="<?php echo $user['username']; ?>" readonly><br><br>
-            <!-- <p><?php echo $user['username']; ?></p><br><br><br> -->
             <label>Password</label>
             <input type="text" name="password" value="<?php echo $user['password']; ?>"><br><br>
-            <!-- <p><?php echo $user['password']; ?></p><br><br><br> -->
              <div class="form-group last">
                 <div class="text-center">
                     <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>

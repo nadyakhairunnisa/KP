@@ -51,6 +51,7 @@
         <div class="col-md-12 input">
         <form class="form-horizontal" role="form" method="post" action="process/dokter/update_profil_dokter.php" align=""> 
             <input type="hidden" value="<?php echo $id; ?>" name="id">
+            <input type="hidden" value="<?php echo $bidan['user_id']; ?>" name="user_id">
             <label>Nama</label>
             <input type="text" name="nama" value="<?php echo $bidan['nama']; ?>" readonly><br>
             <label>No HP</label>
