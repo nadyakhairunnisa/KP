@@ -92,7 +92,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
 
-    <div class="col-md-12">
+    <div class="col-md-12" style="padding:0;">
   <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 0px">
     Copyright &copy Teknik Informatika UII 2017. All right reserved
   </footer>

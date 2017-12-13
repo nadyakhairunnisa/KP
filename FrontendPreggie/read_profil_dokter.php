@@ -92,7 +92,7 @@
         <img src="images/mother.png">
     </div>      
 
-    <div class="col-md-12">
+    <div class="col-md-12" style="padding:0;">
     <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373; margin: 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>

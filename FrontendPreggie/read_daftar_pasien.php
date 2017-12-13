@@ -51,9 +51,10 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
                     <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian" name="cari">
                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
                 </form>
-            </div>
+            </div><br><br><br>
             <div class="input-group-vertical text-right"  >
-                <a class="btn btn-default" href="create_pasien.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Pasien</a></div>
+                <a class="btn btn-default" href="create_pasien.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Pasien</a>
+            </div>
         </form>
         <!-- Kolom search end -->
 
@@ -99,9 +100,11 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
                 ?>
             </tbody>
         </table>
-        <a href="admin_home.php" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
+        <div class="text-left">
+        <a href="admin_home.php" class="btn btn-default btn-sm" style="width: 20%; color: #ff6666; margin: 30px">
         <span class="glyphicon glyphicon-backward"></span> Kembali
         </a>
+    </div>
     </div>
 </div>
 <footer class="navbar navbar-default text-center" style="padding: 30px 0px 50px; color: #737373; margin: 60px 0px 0px">

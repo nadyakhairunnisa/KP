@@ -191,10 +191,10 @@ $today = date('Y-m-d');
       <div class="kotak" style="margin-top: 20px;">
         <div class="col-md-1 ket_1"></div>
         <div class="col-md-3">Hari Ini</div>
-        <div class="col-md-1 ket_3"></div>
-        <div class="col-md-3">Check Up</div>
+<!--         <div class="col-md-1 ket_3"></div>
+        <div class="col-md-3">Check Up</div> -->
         <div class="col-md-1 ket_2"></div>
-        <div class="col-md-3">Check Up Selanjutnya</div><br>      
+        <div class="col-md-3">Check Up</div><br>      
       </div>
     </div>
 
@@ -289,7 +289,7 @@ $today = date('Y-m-d');
   </script>
 
 
-<div class="col-md-12">
+<div class="col-md-12 " style="padding:0;">
   <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 30px 0px 0px">
     Copyright &copy Teknik Informatika UII 2017. All right reserved
   </footer>

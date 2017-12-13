@@ -335,16 +335,16 @@
 
   }
   .ket_1{
-    background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
-    background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: -moz-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: linear-gradient(to right, #ff9999 20%, #ff6666 100%); 
+    background: -webkit-linear-gradient(left, #ff6666 10%, #ff9999 100%);
+    background: -o-linear-gradient(right, #ff6666 10%, #ff9999 100%);
+    background: -moz-linear-gradient(right, #ff6666 10%, #ff9999 100%);
+    background: linear-gradient(to right, #ff6666 10%, #ff9999 100%); 
   }
   .ket_2{
-    background: -webkit-linear-gradient(left, #00ffcc 15%, #00838f 100%);
-    background: -o-linear-gradient(right, #00ffcc 15%, #00838f 100% );
-    background: -moz-linear-gradient(right, #00ffcc 15%, #00838f 100% );
-    background: linear-gradient(to right, #00ffcc 15%, #00838f 100% );
+    background: -webkit-linear-gradient(left, #00838f 5%, #00ffcc 100%);
+    background: -o-linear-gradient(right, #00838f 5%, #00ffcc 100%);
+    background: -moz-linear-gradient(right, #00838f 5%, #00ffcc 100%);
+    background: linear-gradient(to right, #00838f 5%, #00ffcc 100%);
   }
   .ket_3{
     background: -webkit-linear-gradient(left, #ccccff 15%, #9900cc 100%);
@@ -574,8 +574,4 @@
     width: 80%
   }
  
-.col-md-12 .navbar .text-center footer{
-  width: 100%;
-}
-
   
