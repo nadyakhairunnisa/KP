@@ -17,17 +17,21 @@
 	if($tgl_masuk <= $tgl_today){
 		$sql = mysqli_query($conn, "SELECT * FROM user WHERE grup_id='2'");
 		$data = mysqli_num_rows($sql);
+		$max = mysqli_query($conn, "SELECT username FROM user WHERE id=(SELECT MAX(id) FROM user WHERE grup_id='2')");
+		$data2 = mysqli_fetch_array($max);
 
-		if($data<10){
-			$username = 'BD'.($tahun-2000).'00'.($data+1);
-		} else if($data>=10 && $data<100){
-			$username = 'BD'.($tahun-2000).'0'.($data+1);
+		$unameid = substr($data2['username'],-3);
+
+		if($data<=9){
+			$username = 'BD'.($tahun-2000).'00'.($unameid+1);
+		} else if($data>=10 && $data<=99){
+			$username = 'BD'.($tahun-2000).'0'.($unameid+1);
 		} else if($data>=100){
-			$username = 'BD'.($tahun-2000).($data+1);
+			$username = 'BD'.($tahun-2000).($unameid+1);
 		}
 
-		echo "$username";
-		die;
+		// echo "$username";
+		// die;
 		
 
 		$sql1 = mysqli_query($conn, "INSERT INTO user (grup_id, username, password) values ('2', '$username', '$password')");

@@ -13,8 +13,8 @@
 			window.location.href='../../read_daftar_dokter.php' </script>";
 	} else {
 		mysqli_rollback($conn);
-		echo "<script>alert('Data gagal dihapus.');
-			window.location.href='../../read_daftar_dokter.php' </script>";
+		echo "<script>alert('Data gagal dihapus. Error: Dokter terdapat dalam Data Perkembangan.');
+			window.location.href='../../read_profil_dokter.php?id=$id' </script>";
 		// echo mysqli_error ($conn );
 		// die;
 	}

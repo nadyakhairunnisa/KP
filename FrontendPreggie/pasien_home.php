@@ -116,7 +116,7 @@ $today = date('Y-m-d');
 <div class="col-md-12 container" id="kalender">
 
  <div class="col-md-7 col-xs-12 calendar">
-  <h3 style="color: #ff6666">Klik Tanggal untuk Melihat Pemberitahuan</h3>
+  <h3 style="color: #ff6666">Klik Tanggal untuk Melihat Pemberitahuan</h3><br>
       <!-- <div class="calendar_item">
         <div class="month">
           November 2017
@@ -189,7 +189,7 @@ $today = date('Y-m-d');
 
     <div class="col-md-5">
       <div class="kotak" style="margin-top: 20px;">
-        <div class="col-md-1 ket_1"></div>
+        <br><br><div class="col-md-1 ket_1"></div>
         <div class="col-md-3">Hari Ini</div>
 <!--         <div class="col-md-1 ket_3"></div>
         <div class="col-md-3">Check Up</div> -->
@@ -213,8 +213,8 @@ $today = date('Y-m-d');
     $(document).ready(function() {
       $('#calendar').fullCalendar({
           header: {
-        left: 'prev,next today',
-        center: 'title',
+        // left: 'prev,next today',
+        center: 'prev,next',
         right: 'month,basicWeek,basicDay'
       },
             // defaultDate: '2014-09-12',

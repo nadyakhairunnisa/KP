@@ -14,7 +14,7 @@
 	} else {
 		mysqli_rollback($conn);
 		echo "<script>alert('Data gagal dihapus.');
-			window.location.href='../../read_daftar_pasien.php' </script>";
+			window.location.href='../../read_profil_pasien.php?id=$id' </script>";
 		// echo mysqli_error ($conn );
 		// die;
 	}

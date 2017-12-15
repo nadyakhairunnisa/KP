@@ -21,13 +21,21 @@
 
 		$sql = mysqli_query($conn, "SELECT * FROM user WHERE grup_id='3'");
 		$data = mysqli_num_rows($sql);
+		$max = mysqli_query($conn, "SELECT username FROM user WHERE id=(SELECT MAX(id) FROM user WHERE grup_id='3')");
+		$data2 = mysqli_fetch_array($max);
+		// echo $data2['username'];
+		// die;
 
-		if($data<10){
-			$username = 'PS'.($tahun-2000).'00'.($data+1);
-		} else if($data>=10 && $data<100){
-			$username = 'PS'.($tahun-2000).'0'.($data+1);
+		$unameid = substr($data2['username'],-3);
+		
+		// $username = 'PS'.($tahun-2000).($unameid+1);
+
+		if($data<=9){
+			$username = 'PS'.($tahun-2000).'00'.($unameid+1);
+		} else if($data>=10 && $data<=99){
+			$username = 'PS'.($tahun-2000).'0'.($unameid+1);
 		} else if($data>=100){
-			$username = 'PS'.($tahun-2000).($data+1);
+			$username = 'PS'.($tahun-2000).($unameid+1);
 		}
 		
 
@@ -47,6 +55,8 @@
 				window.location.href='../../read_daftar_pasien.php' </script>";
 		}
 		else {
+			echo mysqli_error ($conn );
+			die;
 			mysqli_rollback($conn);
 			echo "<script>alert('Data gagal disimpan.');
 				window.location.href='../../create_pasien.php' </script>";
