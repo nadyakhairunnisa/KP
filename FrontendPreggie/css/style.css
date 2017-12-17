@@ -7,14 +7,7 @@
   .navbar{
     height:60px;
     padding-top:5px;
-  }
-  .navbar-brand{
-    font-family: 'Roboto', sans-serif;    
-    font-size:25px;
-    font-weight:800;
-    letter-spacing:1px;        
-  }  
-
+  } 
   .navbar-brand{
     position: relative;
     background: url(../images/brand.png);
@@ -133,7 +126,7 @@
     -webkit-transition-property: opacity;
     transition-property: opacity;
   }
-  .carousel-fade .carousel-inner .item,
+ /* .carousel-fade .carousel-inner .item,
   .carousel-fade .carousel-inner .active.left,
   .carousel-fade .carousel-inner .active.right {
     opacity: 0;
@@ -150,7 +143,7 @@
     left: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-  }  
+  }  */
   #first-slider .slide1 {
     background-image: url(../images/bg1.jpg);
     background-size: cover;
@@ -177,93 +170,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
-  /*Calendar Style*/
-  .col-md-7.col-xs-12.calendar{
-    margin-top:5px;
-    padding-left:30px;
-  }
-  .calendar_item{
-    box-shadow: 0 5px 10px rgba(0,0,0,0.16), 0 5px 10px rgba(0,0,0,0.23);
-    margin-bottom:30px;
-  }
-  .month{
-    width:100%;    
-    text-align:center;
-    padding-top:40px;padding-bottom:40px;
-    font-size:40px;
-    color:#fff;
-    background: red;
-    background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
-    background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: -moz-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: linear-gradient(to right, #ff9999 20%, #ff6666 100%);
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    text-transform:uppercase;
-    font-weight:900;
-    letter-spacing:1px;
-  }
-  .day{
-    background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
-    background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: -moz-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: linear-gradient(to right, #ff9999 20%, #ff6666 100%);
-    color:#fff;
-    text-align:center;
-    padding-top:10px;
-    height:40px;
-    font-family: 'Roboto', sans-serif;
-    font-weight:800;
-    letter-spacing:0.5px;
-    text-transform:uppercase;    
-  }
-  .date{
-    text-align:center;
-    padding-top:10px;
-    background:#fafafa;
-    height:230px;    
-    font-family: 'Roboto', sans-serif;
-    font-weight:800;
-  }
-  .day p{
-    float:left;
-    width:14%;
-  }  
-  .date p.active_1{
-    background: -webkit-linear-gradient(left, #ff9999 20%, #ff6666 100%);
-    background: -o-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: -moz-linear-gradient(right, #ff9999 20%, #ff6666 100%);
-    background: linear-gradient(to right, #ff9999 20%, #ff6666 100%);    
-    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
-    color:#fff;    
-    cursor:pointer;
-  }
-  .date p.active_2{
-    background: -webkit-linear-gradient(left, #00ffcc 15%, #00838f 100%);
-    background: -o-linear-gradient(right, #00ffcc 15%, #00838f 100% );
-    background: -moz-linear-gradient(right, #00ffcc 15%, #00838f 100% );
-    background: linear-gradient(to right, #00ffcc 15%, #00838f 100% );
-    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
-    color:#fff;
-    cursor:pointer;
-  }
-  .date p.active_3{
-    background: -webkit-linear-gradient(left, #ccccff 15%, #9900cc 100%);
-    background: -o-linear-gradient(right, #ccccff 15%, #9900cc 100%);
-    background: -moz-linear-gradient(right, #ccccff 15%, #9900cc 100%);
-    background: linear-gradient(to right, #ccccff 15%, #9900cc 100%);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
-    color:#fff;
-    cursor:pointer;
-  }
-  .date p{
-    float:left;
-    width:14%;
-    padding-top:7px;padding-bottom:7px;
-  }
-
 
   /*Detail */
   .col-md-4.col-md-12{
@@ -327,7 +233,7 @@
     padding-bottom:10px;
     font-family: 'Roboto', sans-serif;
     font-weight:600;
-    letter-spacing#ff99cc
+    
   }
   .kotak .col-md-1{
     height:30px;

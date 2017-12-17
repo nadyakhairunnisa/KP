@@ -12,7 +12,7 @@ $bidan = mysqli_fetch_array($sql3);
 $today = date('Y-m-d');
 ?>
 
-<div class="col-md-4 col-xs-12">
+<div class="col-md-4">
   <div class="header">
     Pemberitahuan
   </div>

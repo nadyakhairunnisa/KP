@@ -55,8 +55,8 @@
             <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>" readonly><br>
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?php echo $pasien['no_hp']; ?>"><br>
-            <label style="margin-top: 10px;">Golongan Darah</label>
-               <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
+            <label style="margin-top: 13px;">Gol Darah</label>
+               <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 10px;">
                    <option>A</option>
                    <option>B</option>
                    <option>AB</option>
