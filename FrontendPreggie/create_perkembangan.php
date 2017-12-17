@@ -75,7 +75,8 @@
             <label style="margin-top: 45px">Keterangan</label>
             <textarea class="form-control col-md-offset-2"  type="text" name="keterangan" style="width: 85%; height: 90px;margin-top: 25px;">Keluhan: 
 Rekomendasi: 
-Obat: </textarea><br>
+Obat: 
+            </textarea><br>
             <!-- <label>Status</label> -->
             <!-- <select class="form-control col-md-offset-2" name="status" style="width: 85%; height: 40px;margin-top: 25px;">
                <option>Hadir</option>
