@@ -55,7 +55,7 @@
             <input type="text" name="nama" value="<?php echo $pasien['nama']; ?>"><br>
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?php echo $pasien['no_hp']; ?>"><br>
-            <label>Gol Darah</label>
+            <label style="margin-top: 18px">Gol Darah</label>
             <select class="form-control col-md-offset-2" name="gol_darah" style="width: 85%; height: 50px;margin-top: 15px;">
                 <option>A</option>
                 <option>B</option>

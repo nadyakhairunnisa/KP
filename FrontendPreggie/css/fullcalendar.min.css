@@ -67,10 +67,10 @@
 
 
  .fc-event{position:relative;display:block;font-size:.85em;line-height:2;border-radius:3px;
- 	background: -webkit-linear-gradient(left, #00838f 5%, #00ffcc 100%);
-    background: -o-linear-gradient(right, #00838f 5%, #00ffcc 100%);
-    background: -moz-linear-gradient(right, #00838f 5%, #00ffcc 100%);
-    background: linear-gradient(to right, #00838f 5%, #00ffcc 100%);}
+ 	 background: -webkit-linear-gradient(right, #4fc3f7 80%, #e1f5fe 120%);
+    background: -o-linear-gradient(left, #4fc3f7 80%, #e1f5fe 120%);
+    background: -moz-linear-gradient(left, #4fc3f7 80%, #e1f5fe 120%);
+    background: linear-gradient(to left, #4fc3f7 80%, #e1f5fe 120%);}
  .fc-event,.fc-event-dot{background-color:red;}.fc-event,.fc-event:hover{color:#fff;text-decoration:none}
 
 

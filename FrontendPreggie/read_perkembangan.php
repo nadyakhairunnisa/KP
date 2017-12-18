@@ -52,7 +52,8 @@
     <form class="form-horizontal" role="form" method="post" action="process/perkembangan/update_perkembangan.php" align="">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><?php echo $pasien['nama']; ?>
-        <br><br><span style="font-weight: 600; font-size: 15px"><input type="date" name="jadwal_check" style="color: black;" value="<?php echo $p['jadwal_check']; ?>"></span>
+        <br><br><span style="font-weight: 600; font-size: 15px">
+          <input type="date" name="jadwal_check" style="color: black;" value="<?php echo $p['jadwal_check']; ?>"></span>
         <!-- <br><br><input type='text' name='usia_knd' style="color: black; text-align: center;" value='<?php echo $p['usia_knd']; ?> Minggu'> -->
         <br><br><select name="bidan" style="color: black; text-align: center;">
                 <?php 
@@ -100,25 +101,26 @@
       </div>
 
       <div class="col-md-6 up">
-        <img id="usg" src="<?php echo $p['gambar']; ?>">        
+        <img id="usg" src="<?php echo $p['gambar']; ?>">  
+        <div class=" text-left" style="margin-bottom: 10px; width: 60em">        
+                  <a href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id']; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
+                    <span class="glyphicon glyphicon-backward"></span> Kembali
+                  </a>
+                </div>      
       </div>
+
 
       <div class="col-md-6 text-justify" style="background: #ffffff; margin-top: 10px; padding-top: 10px">
         <textarea type="text" name="keterangan" style="width: 85%; height: 90px;"><?php echo $p['keterangan']; ?></textarea><br>
         
     </div>
-
             <div class="form-group last">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center" style="margin-top: 20px;">
                     <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
                     <!-- <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a> -->
-                    <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666">Delete</a>
+                    <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666; width: 22%">Delete</a>
                 </div>
-                <div class=" text-left" style="margin-bottom: 10px; width: 60em">        
-                  <a href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id']; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
-                    <span class="glyphicon glyphicon-backward"></span> Kembali
-                  </a>
-                </div>
+                
             </div>
 
     </div>

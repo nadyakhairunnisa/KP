@@ -245,7 +245,7 @@ $sql3 = mysqli_query($conn, "SELECT DISTINCT pasien_id FROM perkembangan WHERE b
 </div>           
 </div>
 
-<footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 80px 0px 0px">
+<footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 120px 0px 0px">
     Copyright &copy Teknik Informatika UII 2017. All right reserved
 </footer>
 

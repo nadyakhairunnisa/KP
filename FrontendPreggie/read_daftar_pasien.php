@@ -96,8 +96,8 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
                     echo "<td>$nama</td>";
                     echo "<td>
                     <div class='dpasien'>
-                        <a class='btn btn-sm' href='read_profil_pasien.php?id=$id'>Lihat Profil</a>
-                        <a class='btn btn-sm' href='read_daftar_perkembangan.php?id=$id'>Perkembangan</a>
+                        <a class='dpasien_a btn btn-sm' href='read_profil_pasien.php?id=$id'>Profil</a>
+                        <a class='dpasien_b btn btn-sm' href='read_daftar_perkembangan.php?id=$id'>Perkembangan</a>
                     </div> </td>";
                     echo "</tr>";
                 }

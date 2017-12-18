@@ -50,7 +50,7 @@
                     <input type="text" class="form-control"  style="width:200px" placeholder="Pencarian" name="cari">
                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
                 </form>
-            </div>
+            </div> <br><br><br>
             <div class="input-group-vertical text-right"  >
                 <a class="btn btn-default" href="create_dokter.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Dokter</a></div>
         </form>

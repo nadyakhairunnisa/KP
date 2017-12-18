@@ -84,15 +84,17 @@
                     }
                 ?>
 
-                <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
-                    <a href="dokter_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
-                    <span class="glyphicon glyphicon-backward"></span> Kembali
-                    </a>
-                </div>
+               
                 </tbody>
         </table>
+         <div class=" text-left" style="margin: 10px 0px 10px 40px; width: 60em">        
+            <a href="dokter_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="color: #ff6666">
+            <span class="glyphicon glyphicon-backward"></span> Kembali
+            </a>
+        </div>
       </div>
     </div>
+
 
      <footer class="navbar navbar-default text-center" style="padding-top: 20px; color: #737373; margin: 60px 0px 0px">
         Copyright &copy Teknik Informatika UII 2017. All right reserved

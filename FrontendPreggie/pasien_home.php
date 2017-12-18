@@ -144,7 +144,7 @@ $today = date('Y-m-d');
 
     </div>
 
-    <div class="col-md-4 col-xs-12 event_detail">
+    <div class="col-md-4 event_detail">
       <!-- <div class="header">
         Pemberitahuan
       </div> -->
