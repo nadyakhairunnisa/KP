@@ -62,9 +62,13 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
         if(isset($_GET['cari'])){
             $cari = $_GET['cari'];
             echo "<b>Hasil pencarian : ".$cari."</b><br>";
-            // $likeVar = "%" . $cari . "%";
-            $result = mysqli_query($conn, "SELECT id, nama FROM pasien WHERE nama LIKE '%$cari%'");
+            $likeVar = "%" . $cari . "%";
+            $result = mysqli_query($conn, "SELECT id, nama FROM pasien WHERE nama LIKE '$likeVar'");
             $row = mysqli_fetch_array($result);
+            // while ($row = mysqli_fetch_array($result)){
+            //     echo $row['nama']."<br>";
+            // }
+            // die;
             if (empty($row)) {
                 // printf("Error: %s\n", mysqli_error($conn));
                 echo "Kata tidak ditemukan.";

@@ -54,7 +54,7 @@
 				window.location.href='../../read_profil_dokter.php?id=$id' </script>";
 			}
 		} else {
-			$query = mysqli_query($conn, "UPDATE bidan set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', tanggal = '$date' WHERE id = '$id'");
+			$query = mysqli_query($conn, "UPDATE bidan set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', tanggal = '$date' WHERE id = '$id'") && mysqli_query($conn, "UPDATE user set password = '$password' WHERE id = '$user_id'");
 			if($query){
 				mysqli_commit($conn);
 				echo "<script>alert('Data berhasil disimpan!');

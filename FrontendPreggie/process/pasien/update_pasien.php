@@ -62,7 +62,7 @@
 			}
 			// die('test2');
 		} else {
-			$query = mysqli_query($conn, "UPDATE pasien set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', gol_darah = '$gol_darah', usia = '$usia', nama_wali = '$nama_wali' , tanggal = '$date' WHERE id = '$id'");
+			$query = mysqli_query($conn, "UPDATE pasien set nama = '$nama', no_hp = '$no_hp', alamat = '$alamat', gol_darah = '$gol_darah', usia = '$usia', nama_wali = '$nama_wali' , tanggal = '$date' WHERE id = '$id'") && mysqli_query($conn, "UPDATE user set password = '$password' WHERE id = '$user_id'");
 			if($query){
 				mysqli_commit($conn);
 				echo "<script>alert('Data berhasil disimpan!');

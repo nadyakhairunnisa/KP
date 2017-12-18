@@ -13,7 +13,7 @@
 			window.location.href='../../read_daftar_pasien.php' </script>";
 	} else {
 		mysqli_rollback($conn);
-		echo "<script>alert('Data gagal dihapus.');
+		echo "<script>alert('Data gagal dihapus. Error: Pasien terdapat dalam Data Perkembangan.');
 			window.location.href='../../read_profil_pasien.php?id=$id' </script>";
 		// echo mysqli_error ($conn );
 		// die;
