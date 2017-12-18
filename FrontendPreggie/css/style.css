@@ -271,7 +271,6 @@
     width: 100%;
     height: 35%;
     color: #4d4d4d;
-    font-weight: 600;
   }
 
   /*Profil pasien*/
@@ -460,6 +459,23 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
   }
 
+  table.table.table-hover td input{
+    border: none;
+    outline: 0 none;
+    padding:7px 10px;
+  }
+  .col-md-6.text-justify textarea{
+    border: none;
+    outline: 0 none;
+    margin-top:18px;
+    padding-left:10px;
+  }
+  select[name="bidan"],input[name="jadwal_check"]{
+    border: none;
+    outline: 0 none;
+    padding:5px 8px;
+
+  }
   a.dpasien_a{
     color: #4d4d4d;
     width: 40%;

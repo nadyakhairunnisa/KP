@@ -52,7 +52,8 @@
     <form class="form-horizontal" role="form" method="post" action="process/perkembangan/update_perkembangan.php" align="">
     <div class="col-md-12 text-center" id="perkembangan-pasien">
       <h5><?php echo $pasien['nama']; ?>
-        <br><br><span style="font-weight: 600; font-size: 15px"><input type="date" name="jadwal_check" style="color: black;" value="<?php echo $p['jadwal_check']; ?>"></span>
+        <br><br><span style="font-weight: 600; font-size: 15px">
+          <input type="date" name="jadwal_check" style="color: black;" value="<?php echo $p['jadwal_check']; ?>"></span>
         <!-- <br><br><input type='text' name='usia_knd' style="color: black; text-align: center;" value='<?php echo $p['usia_knd']; ?> Minggu'> -->
         <br><br><select name="bidan" style="color: black; text-align: center;">
                 <?php 
