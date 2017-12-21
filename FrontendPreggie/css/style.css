@@ -126,7 +126,7 @@
     -webkit-transition-property: opacity;
     transition-property: opacity;
   }
- /* .carousel-fade .carousel-inner .item,
+  .carousel-fade .carousel-inner .item,
   .carousel-fade .carousel-inner .active.left,
   .carousel-fade .carousel-inner .active.right {
     opacity: 0;
@@ -143,7 +143,7 @@
     left: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-  }  */
+  }  
   #first-slider .slide1 {
     background-image: url(../images/bg1.jpg);
     background-size: cover;

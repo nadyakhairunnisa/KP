@@ -24,6 +24,7 @@ $today = date('Y-m-d');
  <link rel="stylesheet" href="css/bootstrap.min.css">
  <!-- StyleSheet -->
  <link rel="stylesheet" type="text/css" href="css/style.css">
+ <link rel="stylesheet" type="text/css" href="css/animate.css">
  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
  <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
  <!-- <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.print.css'> -->
@@ -203,10 +204,11 @@ $today = date('Y-m-d');
 
   </div><!-- Calendar end -->
 
+  <script type="text/javascript" src="js/js.js"></script>
   <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
   <script type="text/javascript" src="js/jquery2.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/moment.min.js"></script>
   <script type="text/javascript" src="js/fullcalendar.min.js"></script>
   <script>
