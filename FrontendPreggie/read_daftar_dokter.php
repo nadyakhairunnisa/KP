@@ -89,7 +89,7 @@
                     echo "<td>$nama</td>";
                     echo "<td>
                     <div class='dpasien dokter'>
-                        <a class='btn btn-sm' href='read_profil_dokter.php?id=$id'>Lihat Profil</a>
+                        <a class='dpasien_a btn btn-sm' href='read_profil_dokter.php?id=$id'>Profil</a>
                     </div></td>";
                     echo "</tr>";
                 }
