@@ -31,7 +31,7 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
       </div>
       <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="admin_home.php">Home</a></li> 
-          <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <li><a href="process/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
   </div>
 </nav>
@@ -64,12 +64,12 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
             echo "<b>Hasil pencarian : ".$cari."</b><br>";
             $likeVar = "%" . $cari . "%";
             $result = mysqli_query($conn, "SELECT id, nama FROM pasien WHERE nama LIKE '$likeVar'");
-            $row = mysqli_fetch_array($result);
+            // $row = mysqli_fetch_array($result);
             // while ($row = mysqli_fetch_array($result)){
             //     echo $row['nama']."<br>";
             // }
             // die;
-            if (empty($row)) {
+            if (mysqli_num_rows($result) == 0) {
                 // printf("Error: %s\n", mysqli_error($conn));
                 echo "Kata tidak ditemukan.";
                 $result = mysqli_query($conn, "SELECT id, nama FROM pasien");

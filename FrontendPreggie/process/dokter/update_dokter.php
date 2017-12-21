@@ -6,6 +6,7 @@
 	$no_hp = $_POST['no_hp'];
 	$alamat = $_POST['alamat'];
 	$date = $_POST['tanggal'];
+	$password = $_POST['password'];
 	$array=explode("-", $date);
 	$tahun=$array[0];
 	$today = date('d-m-Y');
@@ -33,7 +34,7 @@
 			$username = 'BD'.($tahun-2000).$unameid;
 			//echo $username;
 			//die;
-			$result = mysqli_query($conn, "UPDATE user set username = '$username' WHERE id = '$user_id'");
+			$result = mysqli_query($conn, "UPDATE user set username = '$username', password = '$password' WHERE id = '$user_id'");
 
 			if($result){
 				

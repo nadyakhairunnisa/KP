@@ -69,7 +69,7 @@ $sql3 = mysqli_query($conn, "SELECT DISTINCT pasien_id FROM perkembangan WHERE b
       <ul class="nav navbar-nav navbar-right">
           <li class="active"><a <?php echo ("href='dokter_home.php?id=$bidan[id]'"); ?>>Home</a></li>          
           <li><a <?php echo ("href='dokter_profil.php?id=$bidan[id]'"); ?>>Profil</a></li>
-          <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <li><a href="process/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
   </div>
 </nav>

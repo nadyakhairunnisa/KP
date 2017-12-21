@@ -41,7 +41,7 @@ $today = date('Y-m-d');
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a <?php echo ("href='pasien_home.php?id=$pasien[id]'"); ?>>Home</a></li>          
         <li><a <?php echo ("href='pasien_profil.php?id=$pasien[id]'"); ?>>Profil</a></li>
-        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a href="process/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </nav>
