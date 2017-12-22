@@ -149,7 +149,7 @@ $sql3 = mysqli_query($conn, "SELECT DISTINCT pasien_id FROM perkembangan WHERE b
                             echo "<td>$nama</td>";
                             echo "<td>$jumlah</td>";
                             echo "<td><div class='lihat'><a class='btn btn-sm' href='dokter_daftar_perkembangan.php?id=$id&p_id=$p_id'>
-                            Lihat Perkembangan</a></div></td>"; 
+                            Perkembangan</a></div></td>"; 
                             echo "</tr>";
                             $nums++;
                         }
@@ -169,7 +169,7 @@ $sql3 = mysqli_query($conn, "SELECT DISTINCT pasien_id FROM perkembangan WHERE b
                                 echo "<td>$namas</td>";
                                 echo "<td>$jumlahs</td>";
                                 echo "<td><div class='lihat'><a class='btn btn-sm' href='dokter_daftar_perkembangan.php?id=$id&p_id=$p_ids'>
-                                Lihat Perkembangan</a></div></td>"; 
+                                Perkembangan</a></div></td>"; 
                                 echo "</tr>";
                         }
                     }
@@ -188,7 +188,7 @@ $sql3 = mysqli_query($conn, "SELECT DISTINCT pasien_id FROM perkembangan WHERE b
                         echo "<td>$nama</td>";
                         echo "<td>$jumlah</td>";
                         echo "<td><div class='lihat'><a class='btn btn-sm' href='dokter_daftar_perkembangan.php?id=$id&p_id=$p_id'>
-                        Lihat Perkembangan</a></div></td>"; 
+                        Perkembangan</a></div></td>"; 
                         echo "</tr>";
                 }
                     // else {

@@ -73,12 +73,12 @@
             <label>Password</label>
             <input type="text" name="password" value="<?php echo $user['password']; ?>">
             <div style="text-align:center">
-                <button class="btn btn-sm" type="submit" name="update" style="width: 25%; background: #ff6666; margin-top: 20px"><div onclick="return konfirmasi_ubah()">Submit</div></button></a>
+                <button class="btn btn-md" type="submit" name="update" style="width: 25%; background: #3399ff; color: #f9f9f9; margin-top: 20px"><div onclick="return konfirmasi_ubah()">Submit</div></button></a>
                 <!-- <a onclick="return konfirmasi_tambah()" class="btn btn-sm" href="process/pasien/update_profil_pasien.php" style="background: #ff6666">Submit</a> -->
             </div>  
         </div>
         <br><br><br>
-        <a href="pasien_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 30px">
+        <a href="pasien_home.php?id=<?php echo $id; ?>" class="btn btn-default btn-sm" style="width: 22%; color: #ff6666; margin: 10px">
         <span class="glyphicon glyphicon-backward"></span> Kembali
         </a>
               

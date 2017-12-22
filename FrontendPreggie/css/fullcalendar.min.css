@@ -67,10 +67,10 @@
 
 
  .fc-event{position:relative;display:block;font-size:.85em;line-height:2;border-radius:3px;
- 	 background: -webkit-linear-gradient(right, #4fc3f7 80%, #e1f5fe 120%);
-    background: -o-linear-gradient(left, #4fc3f7 80%, #e1f5fe 120%);
-    background: -moz-linear-gradient(left, #4fc3f7 80%, #e1f5fe 120%);
-    background: linear-gradient(to left, #4fc3f7 80%, #e1f5fe 120%);}
+ 	 background: -webkit-linear-gradient(right, #3399ff 80%, #e1f5fe 120%);
+    background: -o-linear-gradient(left, #3399ff 80%, #e1f5fe 120%);
+    background: -moz-linear-gradient(left, #3399ff 80%, #e1f5fe 120%);
+    background: linear-gradient(to left, #3399ff 80%, #e1f5fe 120%);}
  .fc-event,.fc-event-dot{background-color:red;}.fc-event,.fc-event:hover{color:#fff;text-decoration:none}
 
 
@@ -113,12 +113,8 @@
 
 /*kalender warna hari ini*/
  .fc-unthemed td.fc-today{
- 	 background: -webkit-linear-gradient(left, #ff6666 10%, #ff9999 100%);
-    background: -o-linear-gradient(right, #ff6666 10%, #ff9999 100%);
-    background: -moz-linear-gradient(right, #ff6666 10%, #ff9999 100%);
-    background: linear-gradient(to right, #ff6666 10%, #ff9999 100%); 
+ 	background: #ffcccc;
  }
-
 
 
  .fc-unthemed .fc-disabled-day{background:#d7d7d7;opacity:.3}
@@ -139,7 +135,7 @@
  .ui-widget .fc-event{color:#fff;font-weight:400}
  .ui-widget td.fc-axis{font-weight:400}.fc.fc-bootstrap3 a[data-goto]:hover{text-decoration:underline}
  .fc-bootstrap3 hr.fc-divider{border-color:inherit}.fc-bootstrap3 .fc-today.alert{border-radius:0}
- .fc-bootstrap3 .fc-popover .panel-body{padding:0}.fc-toolbar.fc-header-toolbar{margin-bottom:1em}
+ .fc-bootstrap3 .fc-popover .pane#ffcccc dding:0}.fc-toolbar.fc-header-toolbar{margin-bottom:1em}
  .fc-toolbar.fc-footer-toolbar{margin-top:1em}.fc-toolbar .fc-left{float:left}.fc-toolbar .fc-right{float:right}
  .fc .fc-toolbar>*>*{float:left;margin-left:.75em}.fc .fc-toolbar>*>:first-child{margin-left:0}.fc-toolbar h2{margin:0}
  .fc-toolbar .fc-state-hover,.fc-toolbar .ui-state-hover{z-index:2}.fc-toolbar .fc-state-down{z-index:3}

@@ -68,7 +68,7 @@ $today = date('Y-m-d');
            <div class="col-md-12 text-center">
              <p  data-animation="animated fadeInDown">Kehamilan adalah awal dari masa depan anak-anak anda yang cerah <br> karenanya persiapkanlah dengan sebaik mungkin</p>
              <h3  data-animation="animated fadeInLeft">Diari <span class="blue">Ibu Hamil</span></h3>
-             <a href="#kalender" class="btn btn-info" data-animation="animated fadeInUp" role="button">Kalenderku</a>
+             <a href="#kalender" class="btn btn-primary" data-animation="animated fadeInUp" role="button">Kalenderku</a>
            </div>
          </div>
        </div>
@@ -79,7 +79,7 @@ $today = date('Y-m-d');
          <div class="col-md-12 text-center">
            <p  data-animation="animated fadeInUp">Seorang bayi dapat membuat cinta menjadi lebih kuat, siang menjadi pendek, malam menjadi panjang, masa lalu terlupakan dan masa depan pantas untuk dihidupkan</p>
            <h3 data-animation="animated fadeInDown">Kehidupan <span class="blue">Baru</span></h3>
-           <a href="#kalender" class="btn btn-info" data-animation="animated fadeInUp" role="button">Kalenderku</a>
+           <a href="#kalender" class="btn btn-primary" data-animation="animated fadeInUp" role="button">Kalenderku</a>
          </div>
        </div>
      </div>
@@ -91,7 +91,7 @@ $today = date('Y-m-d');
        <div class="col-md-12 text-center">
          <h3  data-animation="animated fadeInLeft"><span class="blue">Ibu Bahagia </span> Bayi Sehat</h3>
          <p  data-animation="animated fadeInUp">Ketika seoarang anak baru lahir, ibunya juga baru lahir. Karena seorang ibu belum ada sebelumnya </p>
-         <a href="#kalender" class="btn btn-info" data-animation="animated fadeInUp" role="button">Kalenderku</a>
+         <a href="#kalender" class="btn btn-primary" data-animation="animated fadeInUp" role="button">Kalenderku</a>
        </div>
      </div></div>
    </div>
@@ -102,7 +102,7 @@ $today = date('Y-m-d');
        <div class="col-md-12 text-center">
          <p  data-animation="animated fadeInUp">Kelahiran adalah permulaan spiritual yang paling mendalam yang dapat dimiliki seorang wanita</p>
          <h3 data-animation="animated fadeInDown">Membuat <span class="blue">Keajaiban</span></h3>
-         <a href="#kalender" class="btn btn-info" data-animation="animated fadeInUp" role="button">Kalenderku</a>
+         <a href="#kalender" class="btn btn-primary" data-animation="animated fadeInUp" role="button">Kalenderku</a>
        </div>
      </div>
    </div>
@@ -116,8 +116,8 @@ $today = date('Y-m-d');
 <!-- Calendar -->
 <div class="col-md-12 container" id="kalender">
 
- <div class="col-md-7 col-xs-12 calendar">
-  <h3 style="color: #ff6666">Klik Tanggal untuk Melihat Pemberitahuan</h3><br>
+ <div class="col-md-7 calendar">
+  <h3 style="color: #3399ff">Klik Tanggal untuk Melihat Pemberitahuan</h3><br>
       <!-- <div class="calendar_item">
         <div class="month">
           November 2017

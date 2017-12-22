@@ -60,7 +60,7 @@
                 </form>
             </div> -->
             <div class="input-group-vertical text-right"  >
-                <a class="btn btn-default" href="create_perkembangan.php?id=<?php echo $id; ?>" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
+                <a class="btn btn-default" href="create_perkembangan.php?id=<?php echo $id; ?>" style="width:200px; color: #4d4d4d"><span class="glyphicon glyphicon-plus"></span>Tambah Perkembangan</a></div>
         </form>
         <!-- Kolom search end -->
 

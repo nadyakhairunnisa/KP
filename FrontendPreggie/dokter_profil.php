@@ -63,7 +63,7 @@
             <label>Password</label>
             <input type="text" name="password" value="<?php echo $user['password']; ?>">
             <div style="text-align:center;" >
-                <button class="btn btn-sm" type="submit" name="login" style="width: 25%; background: #ff6666; margin-top: 40px"><div onclick="return change()" >Simpan</div></button></a>
+                <button class="btn btn-md" type="submit" name="login" style="width: 25%; background: #3399ff; color: #f9f9f9; margin-top: 40px"><div onclick="return change()" >Simpan</div></button></a>
                 <!-- <input  onclick="change()" type="button" value="Edit" id="myButton1" /> -->
             </div>    
         </div> 

@@ -116,7 +116,7 @@
     </div>
             <div class="form-group last">
                 <div class="col-md-6 text-center" style="margin-top: 20px;">
-                    <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
+                    <button class="btn btn-sm" type="submit" name="login" style="background: #4fc3f7; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
                     <!-- <a class="btn btn-sm" href="read_daftar_perkembangan.php?id=<?php echo $p['pasien_id'];?>" style="background: #ff6666" onclick="return konfirmasi_ubah()">Simpan</a> -->
                     <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-sm" href="process/perkembangan/delete_perkembangan.php?id=<?php echo $p['id'];?>" style="color: #ff6666; width: 22%">Delete</a>
                 </div>
