@@ -65,7 +65,7 @@
             <input type="date" name="tanggal" required><br>
              <div class="form-group last">
                 <div class="text-center" style="margin-top: 20px">
-                    <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_tambah()" >Simpan</div></button>
+                    <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_tambah()" >Submit</div></button>
                     <a onclick="return konfirmasi_hapus()" class="btn btn-default btn-btn-sm" href="read_daftar_pasien.php" style="color: #ff6666; width: 22%">Cancel</a>
                 </div>
             </div>

@@ -70,7 +70,7 @@
             <!-- <p><?php echo $user['password']; ?></p><br><br><br> -->
              <div class="form-group last">
                 <div class="text-center">
-                    <button class="btn btn-md" type="submit" name="login" style="background: #4fc3f7; width: 22%;"><div onclick="return konfirmasi_ubah()" >Simpan</div></button>
+                    <button class="btn btn-md" type="submit" name="login" style="background: #4fc3f7; width: 22%;"><div onclick="return konfirmasi_ubah()" >Submit</div></button>
                     <a class="btn btn-default btn-md" onclick="return konfirmasi_hapus()" href="process/dokter/delete_dokter.php?id=<?php echo $id;?>" style="width: 22%; color: #ff6666">Delete</a>
                 </div>
             </div>
