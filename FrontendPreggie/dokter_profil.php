@@ -77,7 +77,7 @@
     </div>      
 
     <div class="col-md-12" style="padding:0;" >
-    <footer class="navbar navbar-default text-center bottom" style="padding-top: 20px; color: #737373">
+    <footer class="navbar navbar-default text-center bottom" style="padding-top: 20px; margin: 0px; color: #737373">
         Copyright &copy Teknik Informatika UII 2017. All right reserved
     </footer>
     </div>
