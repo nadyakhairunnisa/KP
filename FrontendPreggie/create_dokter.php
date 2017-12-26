@@ -53,7 +53,7 @@
             <label>Tanggal</label>
             <input type="date" name="tanggal" placeholder="Tanggal" required><br>
             <div class="text-center" style="margin-top: 20px">
-                <button class="btn btn-sm" type="submit" name="login" style="background: #ff6666; width: 22%;"><div onclick="return konfirmasi_tambah()" >Submit</div></button>
+                <button class="btn btn-md" type="submit" name="login" style="background: #3399ff; width: 22%;"><div onclick="return konfirmasi_tambah()" >Submit</div></button>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_dokter.html" style="background: #ff6666">Submit</a> -->
             </div>
              <br><br><br>

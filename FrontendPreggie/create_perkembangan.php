@@ -86,7 +86,7 @@ Obat:
                 <input type="file" name="gambar" /> <br>
            
             <div class="text-center">
-                <button class="btn btn-sm" type="submit" name="login" style="width: 25%; background: #ff6666;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>
+                <button class="btn btn-md" type="submit" name="login" style="width: 25%; background: #3399ff;"><div onclick="return konfirmasi_tambah()" >Submit</div></button></a>
                 <!-- <a onclick="konfirmasi_tambah()" class="btn btn-sm" href="read_daftar_perkembangan.php" style="background: #ff6666">Submit</a> -->
             </div> 
             <br><br><br>
