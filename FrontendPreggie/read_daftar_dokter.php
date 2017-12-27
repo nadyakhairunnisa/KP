@@ -52,7 +52,7 @@
                 </form>
             </div> <br><br><br>
             <div class="input-group-vertical text-right"  >
-                <a class="btn btn-default" href="create_dokter.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Dokter</a></div>
+                <a class="btn btn-default" href="create_dokter.php" style="width:200px; color: #737373"><span class="glyphicon glyphicon-plus"></span>Tambah Dokter</a></div>
         </form>
         <!-- Kolom search end -->
 

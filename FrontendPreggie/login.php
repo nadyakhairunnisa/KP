@@ -49,7 +49,7 @@
                         <div class="col-md-12 text-center" >
                             <!-- <a class="btn btn-sm" href="pasien_home.html" style="background: #ff6666">Sign in</a> -->
                             <button class="btn btn-primary" type="submit" name="login">Sign In</button>
-                            <a class="btn btn-default btn-md" href="login.php">Reset</a>
+                            <a class="btn btn-default btn-md" style="color: #4d4d4d" href="login.php">Reset</a>
                         </div>
                     </div>
                     </form>

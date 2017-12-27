@@ -53,7 +53,7 @@ $result = mysqli_query($conn, "SELECT id, nama FROM pasien");
                 </form>
             </div><br><br><br>
             <div class="input-group-vertical text-right"  >
-                <a class="btn btn-default" href="create_pasien.php" style="width:200px"><span class="glyphicon glyphicon-plus"></span>Tambah Pasien</a>
+                <a class="btn btn-default" href="create_pasien.php" style="width:200px; color: #737373"><span class="glyphicon glyphicon-plus"></span>Tambah Pasien</a>
             </div>
         </form>
         <!-- Kolom search end -->
